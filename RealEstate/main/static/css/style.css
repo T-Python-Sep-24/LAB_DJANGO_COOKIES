@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Phudu:wght@300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.f-phudu {
+    font-family:'Phudu', sans-serif;
+}
+
+.f-ubuntu {
+    font-family:'Ubuntu', sans-serif;
+}
+
+.linkHover:hover {
+    text-decoration: underline;
+}
+
+.allicon {
+    color: #23b506;
+    background-color: #23b50647;
+}
+
+.propertiesicon {
+    color: #b77710;
+    background-color: #b7771047;
+}
+
+.hotelicon {
+    color: #c814c0;
+    background-color: #c814bf46;
+}
+
+.villaicon {
+    color: #1216c4;
+    background-color: #1215c443;
+}
