@@ -1,0 +1,125 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Phudu", sans-serif;
+    box-sizing: border-box;
+
+}
+
+html {
+
+}
+
+body {
+
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem 8rem;
+    align-items: center;
+
+}
+.home-icon-link {
+    text-decoration: none;
+    color: black;
+    padding: 0 2rem;
+}
+.home-icon {
+    font-size: 40px;
+    font-weight: 500;
+}
+.top-nav-bar{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 60px;
+    padding: 0.6rem 2rem;
+}
+.top-nav-bar a {
+    text-decoration: none;
+    color: black;
+    padding: 0.8rem 2rem;
+    font-size: 12px;
+}
+
+.page-settings{
+    display: flex;
+    flex-direction row;
+    align-items: center;
+}
+.page-settings a, .page-settings span{
+    padding: 0.3rem;
+}
+footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+.bottom-nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 80px;
+    padding: 0.5rem 2.3rem;
+    width: 40%;
+}
+.bottom-nav-bar div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    width: 90px;
+
+}
+.bottom-nav-bar div a{
+    text-decoration: none;
+    font-size: 15px;
+
+
+}
+.bottom-nav-bar div span{
+
+    border-radius: 50%;
+    padding: 1rem;
+    margin-bottom: 7px;
+
+}
+
+.green span {
+    background-color: rgba(0,255,0,0.3);
+    color: rgb(0,256,0);
+}
+.green a {
+    color: rgb(0,255,0);
+}
+.orange span {
+    background-color: rgba(218, 154, 25, 0.3);
+    color: rgb(218, 154, 25);
+}
+.orange a {
+    color: rgb(218, 154, 25);
+}
+.pink span {
+    background-color: rgba(197, 76, 199, 0.42);
+    color: rgb(197, 76, 199);
+}
+.pink a {
+    color: rgb(197, 76, 199);
+}
+
+.purple span {
+    background-color: rgba(95, 45, 205, 0.6);
+    color: rgb(95, 45, 205);
+}
+.purple a {
+    color: rgb(95, 45, 205);
+}

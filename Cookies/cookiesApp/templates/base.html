@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <header>
+        <a class="home-icon-link" href="{% url 'cookiesApp:main_view' %}"><h1 class="home-icon">HOME</h1></a>
+        <nav class="nav-bar">
+            <a href="{% url 'cookiesApp:main_view' %}">Home</a>
+            <a href="{% url 'cookiesApp:properties_view' %}">Properties</a>
+            <a href="{% url 'cookiesApp:services_view' %}">Services</a>
+            <a href="{% url 'cookiesApp:about_view' %}">About</a>
+            <a href="{% url 'cookiesApp:contact_view' %}">Contact</a>
+        </nav>
+        <div class="page-settings">
+            <span class="material-symbols-outlined">person</span>
+            <a class="sign-up">Sign up</a>
+            <span class="material-symbols-outlined">light_mode</span>
+            <span class="material-symbols-outlined">dark_mode</span>
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
