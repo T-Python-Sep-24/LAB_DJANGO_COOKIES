@@ -24,16 +24,16 @@
 ```
 
 ### Main page Light Mode
-<img width="100%" src="https://github.com/T-Python-Sep-24/LAB-DJANGO-COOKIES/blob/main/resources/screenshots/screen-light.png?raw=true">
+<img width="100%" src="https://github.com/T-Python-Sep-24/LAB_DJANGO_COOKIES/blob/main/resources/screenshots/screen-light.png?raw=true">
 
 ### Dark Mode
-<img width="100%" src="https://github.com/T-Python-Sep-24/LAB-DJANGO-COOKIES/blob/main/resources/screenshots/screen-dark.png?raw=true">
+<img width="100%" src="https://github.com/T-Python-Sep-24/LAB_DJANGO_COOKIES/blob/main/resources/screenshots/screen-dark.png?raw=true">
 
 ### Properties Page `properties/`
-<img width="100%"  src="https://github.com/T-Python-Sep-24/LAB-DJANGO-COOKIES/blob/main/resources/screenshots/screen-properties.png?raw=true">
+<img width="100%"  src="https://github.com/T-Python-Sep-24/LAB_DJANGO_COOKIES/blob/main/resources/screenshots/screen-properties.png?raw=true">
 
 ### Contact Us Page `contact/`
-<img width="100%"  src="https://github.com/T-Python-Sep-24/LAB-DJANGO-COOKIES/blob/main/resources/screenshots/screen-contact.png?raw=true">
+<img width="100%"  src="https://github.com/T-Python-Sep-24/LAB_DJANGO_COOKIES/blob/main/resources/screenshots/screen-contact.png?raw=true">
 
 ### A screen recording walktrhough of the final result
-<img width="100%"  src="https://github.com/T-Python-Sep-24/LAB-DJANGO-COOKIES/blob/main/screenrecord.gif?raw=true">
+<img width="100%"  src="https://github.com/T-Python-Sep-24/LAB_DJANGO_COOKIES/blob/main/screenrecord.gif?raw=true">
