@@ -6,44 +6,60 @@
 
 }
 
-html {
-
-}
-
-body {
-
-}
-
+/* Base Styles */
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 4rem 8rem;
+    padding: 4rem 8rem 2rem 8rem;
     align-items: center;
 
 }
-.home-icon-link {
+.light-wrapper .home-icon-link {
     text-decoration: none;
     color: black;
     padding: 0 2rem;
 }
+.dark-wrapper .home-icon-link {
+    text-decoration: none;
+    color: white;
+    padding: 0 2rem;
+}
+
 .home-icon {
     font-size: 40px;
     font-weight: 500;
 }
-.top-nav-bar{
+.light-wrapper .top-nav-bar{
     display: flex;
     flex-direction: row;
     background-color: white;
-    border: 0.5px solid black;
+
     border-radius: 60px;
     padding: 0.6rem 2rem;
 }
-.top-nav-bar a {
+.dark-wrapper .top-nav-bar{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+
+    border-radius: 60px;
+    padding: 0.6rem 2rem;
+}
+
+.light-wrapper .top-nav-bar a {
     text-decoration: none;
     color: black;
     padding: 0.8rem 2rem;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.dark-wrapper .top-nav-bar a {
+    text-decoration: none;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .page-settings{
@@ -51,22 +67,48 @@ header {
     flex-direction row;
     align-items: center;
 }
-.page-settings a, .page-settings span{
+.light-wrapper .page-settings a, .light-wrapper .page-settings span {
     padding: 0.3rem;
+
+}
+.dark-wrapper .page-settings a, .dark-wrapper .page-settings span {
+    padding: 0.3rem;
+    color: white;
+}
+.light-wrapper .active-mode {
+    background-color: white;
+    border-radius: 50%;
+
+}
+.dark-wrapper .active-mode {
+    background-color: black;
+    border-radius: 50%;
+
 }
 footer{
     display:flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-
+    position: absolute;
+    width: 100%;
+    top: 40rem;
 }
-.bottom-nav-bar {
+.light-wrapper .bottom-nav-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     background-color: white;
-    border: 0.5px solid black;
+
+    border-radius: 80px;
+    padding: 0.5rem 2.3rem;
+    width: 40%;
+}
+.dark-wrapper .bottom-nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
+
     border-radius: 80px;
     padding: 0.5rem 2.3rem;
     width: 40%;
@@ -83,6 +125,7 @@ footer{
 .bottom-nav-bar div a{
     text-decoration: none;
     font-size: 15px;
+    font-weight: 500;
 
 
 }
@@ -115,11 +158,85 @@ footer{
 .pink a {
     color: rgb(197, 76, 199);
 }
-
 .purple span {
     background-color: rgba(95, 45, 205, 0.6);
     color: rgb(95, 45, 205);
 }
 .purple a {
     color: rgb(95, 45, 205);
+}
+
+.light-wrapper {
+    /* Set minimum height to fill viewport */
+    min-height: 100vh;
+    width: 100%;
+
+    /* Background image setup */
+    background-image: url('/static/images/skyscraper.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    position: relative;
+}
+/* end light base page styles */
+.dark-wrapper {
+    /* Set minimum height to fill viewport */
+    min-height: 100vh;
+    width: 100%;
+
+    /* Background image setup */
+    background-image: url('/static/images/skyscraper-dark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    position: relative;
+}
+
+/* main page styles */
+main {
+    padding: 0;
+    margin: 0;
+}
+
+.light-wrapper .title {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 10rem;
+    width: 70%;
+    color: black;
+}
+.dark-wrapper .title {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 10rem;
+    width: 70%;
+    color: white;
+}
+
+.title h1 {
+    font-weight: 500;
+    font-size: 7.8rem;
+}
+
+.title p {
+    font-size: 18px;
+    padding: 2rem 6px;
+}
+.title a {
+    padding-left: 6px;
+}
+.btn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    padding: 7px 28px;
 }

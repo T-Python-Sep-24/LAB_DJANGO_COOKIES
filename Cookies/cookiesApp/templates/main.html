@@ -1,61 +1,14 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Home Page{% endblock %}</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-</head>
-<body>
-<header>
-
-    <a class="home-icon-link" href="{% url 'cookiesApp:main_view' %}"><h1 class="home-icon">HOME</h1></a>
-    <nav class="top-nav-bar">
-        <a href="{% url 'cookiesApp:main_view' %}">Home</a>
-        <a href="{% url 'cookiesApp:properties_view' %}">Properties</a>
-        <a href="{% url 'cookiesApp:services_view' %}">Services</a>
-        <a href="{% url 'cookiesApp:about_view' %}">About</a>
-        <a href="{% url 'cookiesApp:contact_view' %}">Contact</a>
-    </nav>
-    <div class="page-settings">
-        <span class="material-symbols-outlined">person</span>
-        <a class="sign-up">Sign up</a>
-        <span class="material-symbols-outlined">light_mode</span>
-        <span class="material-symbols-outlined">dark_mode</span>
+{% block title %}Home Page{% endblock %}
+{% block content %}
+    <main>
+    <div class="title">
+        <h1>FIND YOUR DREAMS</h1>
+        <p class="decs">Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties, Explore our modern, luxurious properties catalog with variant choices.</p>
+        <a href="{% url 'cookiesApp:properties_view' %}"><button class="btn">Explore Properties</button></a>
     </div>
 
-</header>
-{% block content %}
+
+    </main>
 {% endblock %}
-<footer>
-    <nav class="bottom-nav-bar">
-
-        <div class="nav-item green">
-            <span class="material-symbols-outlined">home</span>
-            <a href="{% url 'cookiesApp:properties_view' %}">ALL</a>
-
-        </div>
-        <div class="nav-item orange">
-            <span class="material-symbols-outlined">apartment</span>
-            <a href="{% url 'cookiesApp:properties_view' %}">PROPERTIES</a>
-
-        </div>
-        <div class="nav-item pink">
-            <span class="material-symbols-outlined">hotel</span>
-            <a href="{% url 'cookiesApp:properties_view' %}">HOTEL</a>
-        </div>
-        <div class="nav-item purple">
-            <span class="material-symbols-outlined">villa</span>
-            <a href="{% url 'cookiesApp:properties_view' %}">VILLA</a>
-        </div>
-
-
-
-    </nav>
-</footer>
-
-</body>
-</html>

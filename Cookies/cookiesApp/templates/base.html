@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,25 +9,54 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
-<body>
-    <header>
-        <a class="home-icon-link" href="{% url 'cookiesApp:main_view' %}"><h1 class="home-icon">HOME</h1></a>
-        <nav class="nav-bar">
-            <a href="{% url 'cookiesApp:main_view' %}">Home</a>
-            <a href="{% url 'cookiesApp:properties_view' %}">Properties</a>
-            <a href="{% url 'cookiesApp:services_view' %}">Services</a>
-            <a href="{% url 'cookiesApp:about_view' %}">About</a>
-            <a href="{% url 'cookiesApp:contact_view' %}">Contact</a>
-        </nav>
-        <div class="page-settings">
-            <span class="material-symbols-outlined">person</span>
-            <a class="sign-up">Sign up</a>
-            <span class="material-symbols-outlined">light_mode</span>
-            <span class="material-symbols-outlined">dark_mode</span>
+<body class="{% if not 'mode' in request.COOKIES %} light-wrapper {% elif 'mode' in request.COOKIES%} dark-wrapper {% endif %}">
+
+<header>
+
+    <a class="home-icon-link" href="{% url 'cookiesApp:main_view' %}"><h1 class="home-icon">HOME</h1></a>
+    <nav class="top-nav-bar">
+        <a href="{% url 'cookiesApp:main_view' %}">Home</a>
+        <a href="{% url 'cookiesApp:properties_view' %}">Properties</a>
+        <a href="{% url 'cookiesApp:services_view' %}">Services</a>
+        <a href="{% url 'cookiesApp:about_view' %}">About</a>
+        <a href="{% url 'cookiesApp:contact_view' %}">Contact</a>
+    </nav>
+    <div class="page-settings">
+        <span class="material-symbols-outlined">person</span>
+        <a class="sign-up">Sign up</a>
+        <a href="{% url 'cookiesApp:light_mode_view' %}"><span class="material-symbols-outlined {% if not 'mode' in request.COOKIES %} active-mode {% endif %}">light_mode</span></a>
+        <a href="{% url 'cookiesApp:dark_mode_view' %}"><span class="material-symbols-outlined {% if 'mode' in request.COOKIES %} active-mode {% endif %}">dark_mode</span></a>
+    </div>
+
+</header>
+{% block content %}
+{% endblock %}
+<footer>
+    <nav class="bottom-nav-bar">
+
+        <div class="nav-item green">
+            <span class="material-symbols-outlined">home</span>
+            <a href="{% url 'cookiesApp:properties_view' %}">ALL</a>
+
         </div>
-    </header>
-    {% block content %}
-    {% endblock %}
+        <div class="nav-item orange">
+            <span class="material-symbols-outlined">apartment</span>
+            <a href="{% url 'cookiesApp:properties_view' %}">PROPERTIES</a>
+
+        </div>
+        <div class="nav-item pink">
+            <span class="material-symbols-outlined">hotel</span>
+            <a href="{% url 'cookiesApp:properties_view' %}">HOTEL</a>
+        </div>
+        <div class="nav-item purple">
+            <span class="material-symbols-outlined">villa</span>
+            <a href="{% url 'cookiesApp:properties_view' %}">VILLA</a>
+        </div>
+
+
+
+    </nav>
+</footer>
 
 </body>
 </html>
