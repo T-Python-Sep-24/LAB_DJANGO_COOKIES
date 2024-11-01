@@ -9,8 +9,13 @@ def main_view(request:HttpRequest):
 
 
 def properties_view(request: HttpRequest):
-
-    request = render(request, 'properties.html')
+    properties = [
+        {"title": "Villa Modern in Malqa", "url": "images/villa1.jpg"},
+        {"title": "Great home for you in Rimal", "url": "/images/villa2.jpg"},
+        {"title": "Villa with 8 bedrooms in Swedey", "url": "images/villa3.jpg"},
+        {"title": "Amazing Villa in Hitten", "url": "images/villa4.jpg"},
+    ]
+    request = render(request, 'properties.html', context={'properties': properties})
     return request
 
 

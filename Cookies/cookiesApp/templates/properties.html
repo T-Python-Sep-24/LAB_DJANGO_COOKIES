@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Properties</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Properties Page {% endblock %}
+{% block content %}
+    <main>
+        <div class="props-container">
+            <h3>OUR PROPERTIES</h3>
+            {% for prop in properties %}
+                <div class="prop-item">
+                    <img src="{% static prop.url %}">
+                    <h4 class="prop-title">{{ prop.title }}</h4>
+                    <button class="more-btn btn">more</button>
+                </div>
+            {% endfor %}
+        </div>
 
-</body>
-</html>
+
+
+    </main>
+{% endblock %}
+{% block footer %}
+    <div></div>
+{% endblock %}

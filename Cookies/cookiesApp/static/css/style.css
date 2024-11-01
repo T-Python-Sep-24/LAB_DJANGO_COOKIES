@@ -20,10 +20,17 @@ header {
     color: black;
     padding: 0 2rem;
 }
+
 .dark-wrapper .home-icon-link {
     text-decoration: none;
     color: white;
     padding: 0 2rem;
+}
+
+.light-wrapper .home-icon-link:hover, .dark-wrapper .home-icon-link:hover {
+    transition: all 0.4s ease-in;
+    transform: scale(1.1);
+    color: red;
 }
 
 .home-icon {
@@ -62,6 +69,12 @@ header {
     font-weight: 500;
 }
 
+.light-wrapper .top-nav-bar a:hover, .dark-wrapper .top-nav-bar a:hover {
+    transition: all 0.4s ease-in;
+    transform: scale(1.1);
+    color: red;
+}
+
 .page-settings{
     display: flex;
     flex-direction row;
@@ -70,6 +83,12 @@ header {
 .light-wrapper .page-settings a, .light-wrapper .page-settings span {
     padding: 0.3rem;
 
+}
+.light-wrapper .page-settings a:hover, .light-wrapper .page-settings span:hover, .dark-wrapper .page-settings a:hover, .dark-wrapper .page-settings span:hover{
+    color: red;
+    cursor: pointer;
+    transition: all 0.25s ease-in;
+    transform: scale(1.1);
 }
 .dark-wrapper .page-settings a, .dark-wrapper .page-settings span {
     padding: 0.3rem;
@@ -224,6 +243,7 @@ main {
 .title h1 {
     font-weight: 500;
     font-size: 7.8rem;
+    animation: scaleIn 0.7s ease-in;
 }
 
 .title p {
@@ -239,4 +259,71 @@ main {
     border: none;
     border-radius: 35px;
     padding: 7px 28px;
+}
+.btn:hover {
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+    transform: scale(1.04);
+    color:red;
+
+
+}
+
+
+@keyframes scaleIn {
+     0% {
+         opacity: 0;
+         transform: scale(0);
+     }
+     10% {
+         transform: scale(0.1);
+     }
+     20% {
+         transform: scale(0.2);
+     }
+
+     60% {
+         transform: scale(0.3);
+     }
+     70% {
+         transform: scale(1.1);
+     }
+
+     100% {
+         opacity: 1;
+         transform: scale(1);
+     }
+ }
+
+/* Properties page Styles */
+
+.props-container {
+    display:flex;
+    flex-direction: column;
+    margin: 3rem;
+    border-radius: 10%;
+    width: 100%;
+
+}
+.prop-item {
+    display:flex;
+    flex-direction: column;
+    border-radius: 10%;
+    min-height: 30%;
+    margin: 3rem;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    background-color: #7b7b7b;
+}
+.prop-item img{
+    width: 30px;
+    border-radius: 10%;
+    padding-bottom: 5rem;
+}
+.prop-item .prop-title{
+
+    padding: 10px;
+    z-index: 1;
+
 }
