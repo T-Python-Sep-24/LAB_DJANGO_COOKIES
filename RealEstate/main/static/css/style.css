@@ -8,8 +8,33 @@
     font-family:'Ubuntu', sans-serif;
 }
 
+.lightbody {
+    background: url('../images/skyscraper.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.darkbody {
+    background: url('../images/skyscraper-dark.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.lightlinks {
+    text-decoration: none;
+    color: rgb(47, 47, 47);
+}
+
+.darklinks {
+    text-decoration: none;
+    color: rgb(233, 233, 233);
+}
+
 .linkHover:hover {
-    text-decoration: underline;
+    color: rgb(127, 180, 255);
+    transition: all 0.3s;
 }
 
 .allicon {
@@ -30,4 +55,9 @@
 .villaicon {
     color: #1216c4;
     background-color: #1215c443;
+}
+
+.activeicon {
+    background-color: rgba(62, 62, 62, 0.652);
+    color: lightgray;
 }

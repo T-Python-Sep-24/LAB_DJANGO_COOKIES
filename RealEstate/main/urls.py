@@ -5,6 +5,7 @@ app_name = "main"
 
 urlpatterns = [
     path("", views.mainView, name="mainView"),
-    path("", views.propertyView, name="propertyView"),
-    path("", views.contactView, name="contactView"),
+    path("property/", views.propertyView, name="propertyView"),
+    path("contact/", views.contactView, name="contactView"),
+    path("mode/<mode>/", views.modeView, name="modeView"),
 ]
