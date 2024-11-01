@@ -1,27 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Phudu:wght@300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 .f-phudu {
-    font-family:'Phudu', sans-serif;
+    font-family: 'Phudu', sans-serif;
 }
 
 .f-ubuntu {
-    font-family:'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.lightbody {
-    background: url('../images/skyscraper.jpeg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.darkbody {
-    background: url('../images/skyscraper-dark.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
+/*Base styling*/
 .lightlinks {
     text-decoration: none;
     color: rgb(47, 47, 47);
@@ -32,9 +19,54 @@
     color: rgb(233, 233, 233);
 }
 
+.activeicondark {
+    background-color: rgba(62, 62, 62, 0.652);
+    color: lightgray;
+}
+
+.activeiconlight {
+    background-color: rgba(211, 211, 211, 0.723);
+    color: rgb(53, 53, 53);
+}
+
 .linkHover:hover {
-    color: rgb(127, 180, 255);
+    color: rgb(84, 145, 205);
+    font-size: 1.1em;
     transition: all 0.3s;
+}
+
+.container .logohover {
+    font-size: 2.5em;
+}
+
+.container .logolight {
+    color: rgb(53, 53, 53);
+}
+
+.container .logodark {
+    color: rgb(250, 243, 238);
+}
+
+.container .logohover:hover {
+    color: rgb(70, 118, 185);
+    font-size: 3em;
+    transition: all 0.3s;
+
+}
+
+/*Home page styling*/
+.homelightbody {
+    background: url('../images/skyscraper.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.homedarkbody {
+    background: url('../images/skyscraper-dark.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .allicon {
@@ -57,7 +89,55 @@
     background-color: #1215c443;
 }
 
-.activeicon {
-    background-color: rgba(62, 62, 62, 0.652);
-    color: lightgray;
+.hometitlelight {
+    font-size: 5em;
+    font-weight: 600;
+    line-height: 1em;
+    color: rgba(0, 0, 0, 0.742);
+    animation: titlemove 2s ease-in;
+}
+
+.hometitledark {
+    font-size: 5em;
+    font-weight: 600;
+    line-height: 1em;
+    color: rgba(255, 255, 255, 0.849);
+    animation: titlemove 2s ease-in;
+}
+
+.homedescriptionlight {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.3em;
+    color: rgba(29, 29, 29, 0.868);
+}
+
+.homedescriptiondark {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.3em;
+    color: rgba(252, 250, 250, 0.934);
+}
+
+/* Animation */
+@keyframes titlemove {
+    0%{
+        opacity: 0;
+        transform: translate(20%, -25%) scale(0.2);
+    }
+
+    50%{
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+
+}
+
+/* Properties page styling*/
+.lightbody{
+    background-color: rgb(243, 238, 228);
+}
+
+.darkbody{
+    background-color: rgb(22, 22, 24);
 }

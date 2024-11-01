@@ -16,15 +16,14 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 
-<body
-    class="{% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darkbody {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightbody {% endif %}">
+<body class="{% block bodyclass %} {% endblock %}">
 
-    <div class="container-fluid pt-4 pb-4">
+    <header class="container-fluid py-4">
         <!-- This navbar expands at large screens, screens smaller than that toggle the collapse property -->
         <nav class="navbar navbar-expand-lg" aria-label="Floating nav">
             <div class="container d-flex flex-row gap-4 justify-content-evenly">
                 <!-- Brand name -->
-                <a class="navbar-brand f-phudu px-4 fs-1" href="/">Home</a>
+                <a class="navbar-brand f-phudu px-4 fw-semibold opacity-75 logohover {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} logodark {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} logolight {% endif %}" href="/">Home</a>
 
                 <!-- Toggle button to display navbar on small screens -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -39,7 +38,7 @@
 
                     <!-- Middle nav -->
                     <ul
-                        class="f-ubuntu navbar-nav mb-2 mb-lg-0 px-4 py-2 d-flex gap-4 align-items-center rounded-pill {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} bg-dark {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} bg-light {% endif %}">
+                        class="shadow f-ubuntu navbar-nav mb-2 mb-lg-0 px-4 py-2 d-flex gap-4 align-items-center rounded-pill {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} bg-dark {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} bg-light {% endif %}">
                         <li class="nav-item">
                             <a class="linkHover {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
                                 aria-current="page" href="/">Home</a>
@@ -69,15 +68,14 @@
                             class="linkHover {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %} p-2">Sign
                             up</a>
                         <a href="{% url 'main:modeView' 'light' %}?next={{request.path}}" class="linkHover links"><span
-                                class="material-symbols-outlined rounded-pill p-2{% if 'mode' not in request.COOKIES or 'mode' in request.COOKIES and request.COOKIES.mode != 'dark' %} activeicon {% else %} darklinks {% endif %}">light_mode</span></a>
+                                class="material-symbols-outlined rounded-pill p-2{% if 'mode' not in request.COOKIES or 'mode' in request.COOKIES and request.COOKIES.mode != 'dark' %} activeiconlight {% else %} darklinks {% endif %}">light_mode</span></a>
                         <a href="{% url 'main:modeView' 'dark' %}?next={{request.path}}" class="linkHover links"><span
-                                class="material-symbols-outlined rounded-pill p-2{% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} activeicon {% else %} lightlinks {% endif %}">dark_mode</span></a>
+                                class="material-symbols-outlined rounded-pill p-2{% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} activeicondark {% else %} lightlinks {% endif %}">dark_mode</span></a>
                     </div>
                 </div>
             </div>
         </nav>
-    </div>
-
+    </header>
 
     <main>
         {% block content %}
@@ -86,57 +84,9 @@
     </main>
 
     <footer>
-        <div class="container-fluid pt-4 pb-4 fixed-bottom">
-            <nav class="navbar navbar-expand-sm" aria-label="Floating nav">
-                <div class="container d-flex flex-row gap-4 justify-content-evenly">
-                    <!-- Toggle button to display navbar on small screens -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarCollapseItems" aria-controls="navbarCollapseItems" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+        {% block footer %}
 
-                    <!-- Bottom nav bar components -->
-                    <div class="collapse navbar-collapse justify-content-center" id="navbarCollapseItems">
-                        <a class="navbar-brand f-phudu" href="/"></a>
-
-                        <ul
-                            class="nav navbar-nav px-4 py-2 {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} bg-dark {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} bg-light {% endif %} shadow rounded-pill f-phudu">
-                            <li class="nav-item d-flex flex-column text-center mx-4">
-                                <a class="material-symbols-outlined p-2 text-decoration-none rounded-pill allicon"
-                                    href="">house</a>
-                                <a class="linkHover links {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
-                                    href="">All</a>
-                            </li>
-                            <li class="nav-item row-cols-1 text-center mx-4">
-                                <a class="col col-sm-4 material-symbols-outlined p-2 text-decoration-none rounded-pill propertiesicon"
-                                    href="{% url 'main:propertyView' %}">apartment</a>
-                                <a class="col linkHover links {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
-                                    href="{% url 'main:propertyView' %}">Properties</a>
-                            </li>
-                            <li class="nav-item d-flex flex-column text-center mx-4">
-                                <a class="material-symbols-outlined p-2 text-decoration-none rounded-pill hotelicon"
-                                    href="">hotel</a>
-                                <a class="linkHover links {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
-                                    href="">Hotel</a>
-                            </li>
-                            <li class="nav-item d-flex flex-column text-center mx-4">
-                                <a class="material-symbols-outlined p-2 text-decoration-none rounded-pill villaicon"
-                                    href="">villa</a>
-                                <a class="linkHover links {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
-                                    href="">Villa</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-        <nav class="navbar navbar-expand-sm align-items-center fixed-bottom">
-            <div class="container flex-sm-column justify-content-evenly my-2">
-
-            </div>
-        </nav>
+        {% endblock %}
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

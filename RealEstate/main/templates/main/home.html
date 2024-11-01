@@ -3,11 +3,59 @@
 
 {% block title %}Real Estate Home{% endblock %}
 
+{% block bodyclass %} homelightbody {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} homedarkbody {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} homelightbody {% endif %} {% endblock %}
 
 {% block content %}
 
 <section>
-    <h1 class="display-6 text-center text-muted">Home</h1>
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-sm-4 col-md-6">
+                <p class="px-2 my-2 f-phudu {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} hometitledark {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} hometitlelight {% endif %}">Find your dreams</p>
+                <p class="px-2 mt-5 mb-3 f-ubuntu {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} homedescriptiondark {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} homedescriptionlight {% endif %}">Our catalog will surprise you. Rather, discover
+                    unprecedented offers of luxury properties. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Vero earum possimus expedita adipisci non incidunt ex libero esse eos eveniet.</p>
+                <a class="btn bg-black rounded-pill text-white fs-6 px-4 py-2 f-ubuntu" href="{% url 'main:propertyView' %}">Explore properties</a>
+            </div>
+            <div class="col-sm-4 col-md-6">
+                <h1 class="display-1 f-phudu"></h1>
+            </div>
+        </div>
+    </div>
 </section>
+
+{% endblock %}
+
+
+{% block footer %}
+
+<!-- Filtering navbar -->
+<nav class="navbar navbar-expand-sm fixed-bottom justify-content-center" aria-label="Floating nav">
+    <!-- Bottom nav bar components -->
+    <ul
+        class="nav navbar-nav px-4 py-2{% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} bg-dark {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} bg-light {% endif %} shadow rounded-pill f-phudu">
+        <li class="nav-item d-flex flex-column text-center mx-md-3">
+            <a class="fs-6 material-symbols-outlined p-2 text-decoration-none rounded-pill allicon" href="">house</a>
+            <a class="fs-6 linkHover links {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
+                href="">All</a>
+        </li>
+        <li class="nav-item row-cols-1 text-center mx-sm-1 mx-md-3">
+            <a class="fs-6 col col-sm-4 material-symbols-outlined p-2 text-decoration-none rounded-pill propertiesicon"
+                href="{% url 'main:propertyView' %}">apartment</a>
+            <a class="fs-6 col linkHover links {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
+                href="{% url 'main:propertyView' %}">Properties</a>
+        </li>
+        <li class="nav-item d-flex flex-column text-center mx-sm-1 mx-md-3">
+            <a class="fs-6 material-symbols-outlined p-2 text-decoration-none rounded-pill hotelicon" href="">hotel</a>
+            <a class="fs-6 linkHover links {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
+                href="">Hotel</a>
+        </li>
+        <li class="nav-item d-flex flex-column text-center mx-sm-1 mx-md-3">
+            <a class="fs-6 material-symbols-outlined p-2 text-decoration-none rounded-pill villaicon" href="">villa</a>
+            <a class="fs-6 linkHover links {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
+                href="">Villa</a>
+        </li>
+    </ul>
+</nav>
 
 {% endblock %}

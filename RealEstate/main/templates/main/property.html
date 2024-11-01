@@ -3,11 +3,22 @@
 
 {% block title %}Properties{% endblock %}
 
+{% block bodyclass %} lightbody {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darkbody {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightbody {% endif %} {% endblock %}
 
 {% block content %}
 
 <section>
-    <h1 class="display-1">Property</h1>
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-sm-4 col-md-6">
+                <h1 class="display-1 f-phudu">properties</h1>
+            </div>
+            <div class="col-sm-4 col-md-6">
+                
+            </div>
+        </div>
+    </div>
 </section>
 
 {% endblock %}
+
