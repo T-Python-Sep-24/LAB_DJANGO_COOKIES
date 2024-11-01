@@ -19,13 +19,16 @@ def properties_view(request: HttpRequest):
         {"title": "Villa with 8 bedrooms in Swedey", "url": "images/villa3.jpg"},
         {"title": "Amazing Villa in Hitten", "url": "images/villa4.jpg"},
     ]
+
     request = render(request, 'properties.html', context={'properties': properties})
+    request.set_cookie("props", "props")
     return request
 
 
 def contact_view(request: HttpRequest):
 
     request = render(request, 'contact.html')
+    request.set_cookie("props", "props")
     return request
 
 
