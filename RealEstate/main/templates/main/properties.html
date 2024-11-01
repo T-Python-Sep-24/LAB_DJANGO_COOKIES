@@ -1,0 +1,60 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}Properties{%endblock %}
+
+{% block content %}
+
+<main>
+  <section class="properties-section">
+
+    <h2>OUR PROPERTIES</h2>
+    <div class="properties-grid">
+      {% for property in properties %}
+      <div class="property">
+        <img src="{% static 'images/' %}{{ property.image }}" alt="{{ property.title }}" />
+
+        <div class="property-info">
+          <h3>{{ property.title }}</h3>
+          <button>More</button>
+        </div>
+      </div>
+      {% endfor %}
+
+
+
+      <!-- bfore adding Properties dictionaries
+      <div class="property">
+        <img src="{% static 'images/villa2.jpg' %}" alt="GREAT HOME FOR YOU IN RIMAL" />
+        <div class="property-info">
+          <h3>GREAT HOME FOR YOU IN RIMAL</h3>
+          <button>More</button>
+        </div>
+      </div>
+
+
+      <div class="property">
+        <img src="{% static 'images/villa3.jpg' %}" alt="VILLA WITH 8 BEDROOMS IN SWEDEY" />
+        <div class="property-info">
+          <h3>VILLA WITH 8 BEDROOMS IN SWEDEY</h3>
+          <button>More</button>
+        </div>
+      </div>
+
+
+      <div class="property">
+        <img src="{% static 'images/villa4.jpg' %}" alt="AMAZING VILLA IN FRANCE" />
+        <div class="property-info">
+          <h3>AMAZING VILLA IN FRANCE</h3>
+          <button>More</button>
+        </div>
+      </div>
+
+      Main Content Block -->
+    
+    </div>
+  </section>
+</main>
+
+{% endblock %}
