@@ -1,6 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} Contacts Page {% endblock %}
+{% block additional_styles %}
+    <style>
+        .light-wrapper{
+            background-image: url('/static/images/email.jpg');
+            background-color: white;
+
+        }
+        .dark-wrapper{
+            background-image: url('/static/images/email.jpg');;
+            background-color: black;
+        }
+    </style>
+{% endblock %}
 {% block content %}
 
 <main class="contacts-main">
@@ -12,28 +25,23 @@
 
                     <div class="contact-item">
                         <strong>TELEPHONE:</strong>
-                        <a href="tel:+966572638883764">+966 572638883764</a>
+                        <a href="tel:+966572638883764">+966 544544544</a>
                     </div>
                     <div class="contact-item">
                         <strong>EMAIL:</strong>
-                        <a href="mailto:info@realestate.com">info@realestate.com</a>
+                        <a href="mailto:hmzh@gmail.com">hmzh@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <strong>ADDRESS:</strong><br>
                         ANAS BIN MALIK, RIYADH<br>
-                        BUILDING W-112<br>
+                        BUILDING G-10<br>
                         SAUDI ARABIA
                     </div>
                 </div>
             </div>
 
         <div class="map-container">
-            <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.5413092543985!2d46.67518!3d24.713588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0353b52688db%3A0x73f585a324a6d3b3!2sAnas%20Bin%20Malik%20Rd%2C%20Riyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1699932458923!5i0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.286944013748!2d46.712917699999984!3d24.854047500000018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efbd2d9c324c7%3A0x9124f530f1b56443!2z2KfZg9in2K_ZitmF2YrYqSDYt9mI2YrZgg!5e0!3m2!1sar!2ssa!4v1730496704092!5m2!1sar!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         </div>
     </main>

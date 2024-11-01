@@ -82,6 +82,7 @@ header {
 }
 .light-wrapper .page-settings a, .light-wrapper .page-settings span {
     padding: 0.3rem;
+    color: black;
 
 }
 .light-wrapper .page-settings a:hover, .light-wrapper .page-settings span:hover, .dark-wrapper .page-settings a:hover, .dark-wrapper .page-settings span:hover{
@@ -186,26 +187,23 @@ footer{
 }
 
 .light-wrapper {
-    /* Set minimum height to fill viewport */
+
     min-height: 100vh;
     width: 100%;
 
-    /* Background image setup */
     background-image: url('/static/images/skyscraper.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
     position: relative;
 }
 /* end light base page styles */
 .dark-wrapper {
-    /* Set minimum height to fill viewport */
+
     min-height: 100vh;
     width: 100%;
 
-    /* Background image setup */
     background-image: url('/static/images/skyscraper-dark.jpg');
     background-size: cover;
     background-position: center;
@@ -296,8 +294,6 @@ main {
  }
 
 /* Properties page Styles */
-
-/* Properties Section Styles */
 .props-container {
   display: flex;
   height:100%;
@@ -308,7 +304,15 @@ main {
   padding: 25px 3.8rem;
   flex-wrap: wrap;
 }
-.page-title{
+.light-wrapper .page-title{
+    color: black;
+    padding: 0rem 7rem;
+    font-size: 1.9rem;
+    font-weight: 400;
+
+}
+.dark-wrapper .page-title{
+    color: white;
     padding: 0rem 7rem;
     font-size: 1.9rem;
     font-weight: 400;
@@ -317,14 +321,23 @@ main {
 .props-main{
     margin: 3rem;
 }
-.prop-item {
+.light-wrapper .prop-item {
     display: flex;
     flex-direction: column;
     border-radius: 25px;
     min-height: 12rem;
     width: 30%;
     height: 20%;
-    background-color: white;
+    background-color: #e2e1e1;
+}
+.dark-wrapper .prop-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    min-height: 12rem;
+    width: 30%;
+    height: 20%;
+    background-color: #414143;
 }
 
 .prop-item img {
@@ -335,8 +348,15 @@ main {
 
 }
 
-.prop-title {
-
+.light-wrapper .prop-title {
+    color: black;
+    padding-left: 15px;
+    padding-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.dark-wrapper .prop-title {
+    color: white;
     padding-left: 15px;
     padding-top: 20px;
     font-size: 1.2rem;
@@ -357,18 +377,22 @@ main {
     display: flex;
     flex-direction: column;
     margin: 3.5rem 5rem;
-    background-image: url('/static/images/email.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
+
 }
-.section-title {
+.light-wrapper .section-title {
 
     padding: 0rem 5rem;
     font-size: 1.9rem;
     font-weight: 400;
+    color: black;
+
+}
+.dark-wrapper .section-title {
+
+    padding: 0rem 5rem;
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: white;
 
 }
 .contact-container{
@@ -380,7 +404,6 @@ main {
 
     padding: 40px;
     border-radius: 15px;
-
     width: 50%;
 }
 
@@ -388,13 +411,23 @@ main {
     margin-bottom: 30px;
 }
 
-.contact-item {
+.light-wrapper .contact-item {
     margin-bottom: 15px;
     font-size: 20px;
+    color: black;
+}
+.dark-wrapper .contact-item {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: white;
 }
 
-.contact-item a {
-    color: #0066cc;
+.light-wrapper .contact-item a {
+    color: black;
+    text-decoration: none;
+}
+.dark-wrapper .contact-item a {
+    color: white;
     text-decoration: none;
 }
 /* map style */

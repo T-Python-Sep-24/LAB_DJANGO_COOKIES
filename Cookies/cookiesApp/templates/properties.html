@@ -1,6 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} Properties Page {% endblock %}
+{% block additional_styles %}
+    <style>
+        .light-wrapper{
+            background-image: none;
+            background-color: #ebeae9;
+
+        }
+        .dark-wrapper{
+            background-image: none;
+            background-color: #2c2c2e;
+        }
+    </style>
+{% endblock %}
 {% block content %}
     <main>
         <div class="props-main">
