@@ -3,19 +3,19 @@
 {% block title %} Properties Page {% endblock %}
 {% block content %}
     <main>
-        <div class="props-container">
-            <h3>OUR PROPERTIES</h3>
-            {% for prop in properties %}
-                <div class="prop-item">
-                    <img src="{% static prop.url %}">
-                    <h4 class="prop-title">{{ prop.title }}</h4>
-                    <button class="more-btn btn">more</button>
-                </div>
-            {% endfor %}
+        <div class="props-main">
+            <h3 class="page-title">OUR PROPERTIES</h3>
+            <div class="props-container">
+
+                {% for prop in properties %}
+                    <div class="prop-item">
+                        <img src="{% static prop.url %}">
+                        <h4 class="prop-title">{{ prop.title }}</h4>
+                        <button class="more-btn btn">more</button>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
-
-
-
     </main>
 {% endblock %}
 {% block footer %}
