@@ -1,0 +1,34 @@
+
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extra_css %}
+<style>
+    .container{
+        background-image: url('{%static "images/email.jpg"%}');
+    }
+    .darkmode .container{
+        background-image: url('{%static "images/email.jpg"%}');
+    }
+</style>
+{% endblock %}
+{%block title%}Contact US{% endblock %}
+
+{% block content %}
+<div class="contact_us">
+    
+    <div class="information">
+        <h1>CONTACT US</h1>
+        <H2>TELEPHONE: <a href="tel:0591445281" class="contatct">0591445281</a></H2>
+        <h2>EMAIL <a href="mailto:almaghamsiali@gmail.com">almaghamsiali@gmail.com</a></h2>
+        <h2>ADDRESS</h2>
+        <pre>ANAS BIN MALIK.RIYADH 
+    BUILDING W-112
+    SAUDI ARABIA
+        </pre>
+    </div>
+    <div class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5033.048406930479!2d46.724579041098984!3d24.825847627238435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efc6d472d42af%3A0x24b3a53de9cbc5c3!2sPark%20Avenue%20Mall!5e0!3m2!1sen!2ssa!4v1730574697127!5m2!1sen!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+
+{% endblock %}

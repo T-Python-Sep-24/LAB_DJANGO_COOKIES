@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" {% if 'darkmode' in request.COOKIES %} class="darkmode"  {% endif %}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{% endblock %}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="{% url 'main:home_view' %}"><h1>HOME</h1></a>
+            <div class="bar">
+                <nav>
+                    <a href="{% url 'main:home_view' %}">Home</a>
+                    <a href="{% url 'main:properties_view' %}">Properties</a>
+                    <a href="">Services</a>
+                    <a href="">About</a>
+                    <a href="{% url 'main:contact_view' %}">Contact</a>
+                </nav>
+            </div>
+            <div class="icons">
+                <a href="" class="signin"><span class="material-symbols-outlined">person</span> sign in</a>
+                <a href="{% url 'main:light_mode_view' %}"><span class="material-symbols-outlined {% if not 'darkmode' in request.COOKIES %}light{% endif %}">light_mode</span></a>
+                <a href="{% url 'main:night_mode_view' %}"><span class="material-symbols-outlined {% if 'darkmode' in request.COOKIES %}dark{% endif %}">dark_mode </span></a>
+            </div>
+            
+        </header>
+        <main>
+            {% block content %}
+            
+            {% endblock %}
+        </main>
+
+    </div>
+    <footer>
+        Real estate All right reserves 2024
+    </footer>
+    
+</body>
+</html>

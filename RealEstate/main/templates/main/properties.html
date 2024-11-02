@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+{% load static %} 
+
+{%block title%}Properties{% endblock %}
+
+{% block extra_css %}
+<style>
+    .container{
+        background-image: none;
+    }
+    .darkmode .container{
+        background-image: none;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="properties">
+    <h1>OUR PROPERTIES</h1>
+
+    <div class="top_row_content">
+        {% for property in properties|slice:"3" %}
+            <div class="properties_image">
+                <img src="{% static 'images/'|add:property.image %}" alt="">
+                <p>{{ property.title }}</p>
+                <a href="">more</a>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="bottom_row_content">
+        {% if properties|length > 3 %}
+            <div class="properties_image">
+                <img src="{% static 'images/'|add:properties.3.image %}" alt="">
+                <p>{{ properties.3.title }}</p>
+                <a href="">more</a>
+            </div>
+        {% endif %}
+    </div>
+    
+
+</div>
+
+{% endblock %}
