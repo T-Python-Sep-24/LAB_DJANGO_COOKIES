@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealEstate - {% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body class="mode-{% if request.COOKIES.mode == 'dark' %}dark{% else %}light{% endif %}">
+
+    <div class="logo-container">
+        <h1 class="logo">HOME</h1>
+    </div>
+
+    <header class="navbar">
+        <div class="navbar-container">
+            <nav class="navbar-links">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'properties' %}">Properties</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="user-options-container">
+        <a href="#"><span class="material-icons">account_circle</span> Sign Up</a>
+        <a href="{% url 'set_light_mode' %}" title="Light Mode">
+            <span class="material-icons">light_mode</span>
+        </a>
+        <a href="{% url 'set_dark_mode' %}" title="Dark Mode">
+            <span class="material-icons">dark_mode</span>
+        </a>
+    </div>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="property-type-icons">
+            <a href="#" class="icon-wrapper">
+                <span class="material-icons">home</span><br>ALL
+            </a>
+            <a href="{% url 'properties' %}" class="icon-wrapper">
+                <span class="material-icons">apartment</span><br>PROPERTIES
+            </a>
+            <a href="#" class="icon-wrapper">
+                <span class="material-icons">hotel</span><br>HOTEL
+            </a>
+            <a href="#" class="icon-wrapper">
+                <span class="material-icons">villa</span><br>VILLA
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
