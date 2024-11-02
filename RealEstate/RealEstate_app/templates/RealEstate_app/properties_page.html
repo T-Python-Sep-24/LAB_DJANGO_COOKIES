@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Our Properties</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">RealEstate</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="dark-mode-toggle">🌙</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="properties">
+            <h2>OUR PROPERTIES</h2>
+            <div class="property-list">
+                <div class="property-card">
+                    <img src="static/images/villa1.jpg" alt="Villa Modern in Malqa">
+                    <h3>VILLA MODERN IN MALQA</h3>
+                    <a href="#" class="more-btn">more</a>
+                </div>
+                <div class="property-card">
+                    <img src="static/images/villa2.jpg" alt="Great Home for You in Rimal">
+                    <h3>GREAT HOME FOR YOU IN RIMAL</h3>
+                    <a href="#" class="more-btn">more</a>
+                </div>
+                <div class="property-card">
+                    <img src="static/images/villa3.jpg" alt="Villa with 8 Bedrooms in Swedey">
+                    <h3>VILLA WITH 8 BEDROOMS IN SWEDEY</h3>
+                    <a href="#" class="more-btn">more</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RealEstate. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.dark-mode-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>

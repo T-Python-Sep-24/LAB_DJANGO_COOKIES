@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Contact Us</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">RealEstate</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="dark-mode-toggle">🌙</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h2>CONTACT US</h2>
+            <div class="contact-info">
+                <p><strong>TELEPHONE:</strong> +966 57263883764</p>
+                <p><strong>EMAIL:</strong> <a href="mailto:info@realeastate.com">info@realeastate.com</a></p>
+                <p><strong>ADDRESS:</strong></p>
+                <p>ANAS BIN MALIK, RIYADH<br>BUILDING W-112<br>SAUDI ARABIA</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.345579928563!2d46.68519431530956!3d24.77124498420653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3f1f3f1f1f1f1%3A0x1234567890abcdef!2sAnas%20Bin%20Malik%2C%20Riyadh%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1678901234567" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RealEstate. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.dark-mode-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>

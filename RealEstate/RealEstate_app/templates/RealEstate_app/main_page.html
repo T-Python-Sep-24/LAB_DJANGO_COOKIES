@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>RealEstate</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">RealEstate</div>
+            <ul>
+                <li><a href="main_page.html">Home</a></li>
+                <li><a href="properties_page.html">Properties</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="contacUs_page.html"</a></li>
+            </ul>
+            <div class="dark-mode-toggle">🌙</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>FIND YOUR DREAMS</h1>
+            <p>Our catalog will surprise you. Discover unprecedented offers of luxury properties.</p>
+            <a href="properties_page.html" class="explore-btn">Explore Properties</a>
+        </section>
+
+        <section class="properties">
+            <h2>Featured Properties</h2>
+            <div class="property-list">
+                {% for property in properties %}
+                <div class="property-card">
+                    <img src="static/images/{{ property.image }}" alt="{{ property.title }}">
+                    <h3>{{ property.title }}</h3>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RealEstate. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.dark-mode-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
