@@ -11,7 +11,7 @@
 
     {% endblock %}
 </head>
-<body class="the-body {% if not 'mode' in request.COOKIES %}light-wrapper{% elif 'mode' in request.COOKIES %}dark-wrapper{% endif %} ">
+<body class=" {% if not 'mode' in request.COOKIES %}light-wrapper{% elif 'mode' in request.COOKIES %}dark-wrapper{% endif %} ">
 
 <header>
 

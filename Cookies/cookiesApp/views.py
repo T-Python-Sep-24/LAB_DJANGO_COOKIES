@@ -3,7 +3,7 @@ from django.http import HttpRequest, HttpResponse
 # Create your views here.
 
 
-def main_view(request:HttpRequest):
+def main_view(request: HttpRequest):
     request = render(request, 'main.html')
     return request
 
@@ -21,27 +21,25 @@ def properties_view(request: HttpRequest):
     ]
 
     request = render(request, 'properties.html', context={'properties': properties})
-    request.set_cookie("props", "props")
+
     return request
 
 
 def contact_view(request: HttpRequest):
-
     request = render(request, 'contact.html')
-    request.set_cookie("props", "props")
     return request
 
 
 def dark_mode(request: HttpRequest):
     request = redirect('cookiesApp:main_view')
     request.set_cookie("mode", "dark", max_age=60*60*24)
-    print(request.cookies)
+
     return request
 
 def light_mode(request: HttpRequest):
     request = redirect('cookiesApp:main_view')
     request.delete_cookie("mode")
-    print(request.cookies)
+
     return request
 
 
