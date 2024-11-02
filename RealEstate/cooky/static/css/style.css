@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    /* background-color: antiquewhite; */
+}
+
+.Phudu {
+    /* <weight>: Use a value from 300 to 900 */
+    font-family: "Phudu", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    top: 3rem;
+    position: fixed;
+    z-index: 1000;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+header .active-mode {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px; 
+    height: 43px; */
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    background-color: rgb(255, 254, 250);
+    border-radius: 30px;
+    padding: 20px 50px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+/* main {
+    flex: 1;
+} */
+
+footer {
+    height: 60px;
+    background-color: rgb(232, 232, 232);
+}
+
+.main_div {
+    flex: 1;
+    background-image: url("/static/images/skyscraper.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.adjust_main_home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.main_home {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.main_home-h1{
+    font-size: 150px;
+    font-family: "Phudu", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+
+.main_home button {
+    margin-top: 10px;
+    width: 10.5rem;
+    border-radius: 20px;
+    padding:8px 0;
+    color: white;
+    background-color: black;
+}
+
+.nav_home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: rgb(255, 254, 250);
+    border-radius: 50px;
+    width: auto;
+    padding: 20px 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.nav_home a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+}
+
+.nav_home span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px; 
+    height: 43px;
+    border-radius: 50%;
+}
+
