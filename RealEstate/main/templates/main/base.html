@@ -1,11 +1,80 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" {% if request.COOKIES.mode == "dark" %}class="dark-mode"{% endif %}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{% block title %}RealEstate{% endblock %}</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Static CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Inline Style for Background Images -->
+    <style>
+        .hero-section {
+            background-image: url("{% static 'images/skyscraper.jpeg' %}");
+            background-size:cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: black;
+            transition: background-image 0.5s ease-in-out;
+        }
+        
+        html.dark-mode .hero-section {
+            background-image: url("{% static 'images/skyscraper-dark.jpg' %}");
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1>Base pass</h1>
+
+<a href="{% url 'main:index_view' %}" class="logo">HOME</a>
+    <!-- Header with Navigation -->
+        <nav class="navbar">      
+            <!-- Centered Navigation Menu -->
+            <ul class="nav-menu">
+                <li><a href="{% url 'main:index_view' %}">Home</a>
+                </li>
+                <li><a href="{% url 'main:properties_view' %}">Properties</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="{% url 'main:contact_view' %}">Contact</a></li>
+            </ul>
+<!-- Right-side icons -->
+<div class="right-nav">
+    <a href="#" class="icon-link">
+        <span class="material-icons">person</span> Sign up
+    </a>
+    {% if request.COOKIES.mode == "dark" %}
+        <a href="{% url 'main:mode_view' 'light' %}?next={{ request.path }}" class="icon-link">
+            <span class="material-icons">brightness_7</span> <!-- Light mode icon -->
+        </a>
+    {% else %}
+        <a href="{% url 'main:mode_view' 'dark' %}?next={{ request.path }}" class="icon-link">
+            <span class="material-icons">brightness_4</span> <!-- Dark mode icon -->
+        </a>
+    {% endif %}
+</div>
+        </nav>
+    <!-- Main content -->
+    
+        {% block content %}  {% endblock %}
+     
+      
+
+
+    <!-- Footer -->
+    <footer>
+        <p>All Rights Reserved.</p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,442 @@
+/* Base Styles */
+body {
+    font-family: 'Phudu', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Header and Navigation */
+header {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    transition: background-color 0.3s;
+}
+
+html.dark-mode header {
+    background-color: #333;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff; /* Adjust to your design */
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    padding: 20px 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+    
+}
+.logo:hover{
+    background-color: red;
+}
+
+html.dark-mode .logo {
+    color: #ddd;
+}
+
+   /* Centered Navigation Menu */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.nav-menu li {
+    display: inline;
+    transition: transform 0.3s ease;
+}
+
+.nav-menu li:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+}
+
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.navbar a:hover {
+    color: #000; /* Darker color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+
+}
+
+html.dark-mode .nav-menu a {
+    color: #ddd;
+}
+/* General Dark Mode Styles */
+html.dark-mode {
+    background-color: #333; /* Dark background for the entire page */
+    color: #ddd; /* Light text color for readability */
+}
+
+/* Dark Mode Header and Navigation Styles */
+html.dark-mode header,
+html.dark-mode .navbar {
+    background-color: #333; /* Dark header and navbar */
+}
+
+html.dark-mode .nav-menu a,
+html.dark-mode .right-nav .icon-link {
+    color: #ddd; /* Light text color for links */
+}
+
+html.dark-mode .logo {
+    color: #ddd; /* Light color for logo in dark mode */
+}
+
+/* Footer in Dark Mode */
+html.dark-mode footer {
+    background-color: #333; /* Footer matches the entire dark mode background */
+    color: #bbb; /* Lighter color for footer text */
+}
+
+/* Dark Mode for Main Content */
+html.dark-mode main {
+    background-color: #333; /* Main content background in dark mode */
+    color: #ddd; /* Text color for better readability */
+}
+
+/* Dark Mode for Categories Section */
+html.dark-mode .categories {
+    background-color: #333; /* Dark background for categories section */
+    color: #ddd; /* Light text color */
+}
+
+html.dark-mode .category-item {
+    background-color: #444; /* Slightly lighter background for category items */
+    color: #ddd; /* Light text color */
+}
+
+html.dark-mode .category-icon {
+    color: #ddd; /* Light color for icons */
+}
+
+/* Dark Mode for Property Cards */
+html.dark-mode .property-card {
+    background-color: #444; /* Dark background for property cards */
+    color: #ddd; /* Light text for property details */
+}
+
+html.dark-mode .property-card h3 {
+    color: #ddd; /* Light color for property titles */
+}
+
+/* Dark Mode for Contact Section */
+html.dark-mode .contact-section {
+    background-color: #333; /* Dark background for the contact section */
+    color: #ddd; /* Light text for contact section */
+    background-image: none; /* Remove background image in dark mode for better readability */
+}
+
+html.dark-mode .contact-info {
+    background-color: rgba(50, 50, 50, 0.9); /* Darker transparent background for the contact info box */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode .contact-link {
+    color: #77aaff; /* Softer blue for links in dark mode */
+}
+
+html.dark-mode .map iframe {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Mode for Buttons */
+html.dark-mode .explore-btn {
+    background-color: #444; /* Dark button background */
+    color: #ddd; /* Light button text color */
+}
+
+html.dark-mode .explore-btn:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+}
+
+/* Dark Mode for Footer */
+html.dark-mode footer {
+    background-color: #333; /* Dark footer background */
+    color: #bbb; /* Light text color */
+}
+
+.right-nav {
+    align-items:center;
+    justify-content: space-between;
+    display: flex;
+    gap: 15px;
+}
+
+.icon-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.icon-link .material-icons {
+    margin-right: 5px;
+}
+
+html.dark-mode .icon-link {
+    color: #ddd;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeIn 2s ease;
+}
+
+.hero-title {
+    font-size: 64px;
+    font-weight: bold;
+    margin: 0;
+    
+}
+
+.hero-description {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.explore-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #333;
+}
+
+/* Categories Section for Index Page */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    animation: slideUp 1s ease;
+}
+
+.category-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+    transform: scale(1.1);
+}
+
+.category-icon {
+    font-size: 40px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+html.dark-mode .category-icon {
+    color: #bbb;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+html.dark-mode footer {
+    background-color: #222;
+    color: #bbb;
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Properties Section */
+.properties-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.property-card {
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 10px;
+}
+
+.property-card:hover {
+    transform: scale(1.05);
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 5px solid #ddd;
+}
+
+.property-card h3 {
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.explore-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 90px;
+}
+
+.explore-btn:hover {
+    background-color: #333;
+}
+
+/* Contact Page Styles */
+.contact-section {
+    padding: 60px;
+    background-image: url("{% static 'images/email.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black; /* Adjust text color for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    min-height: 100vh; /* Ensure the section takes full height */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for better readability */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+.contact-details {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-link {
+    color: blue;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.map {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.map iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional Styling to Enhance Layout */
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contact-info .contact-details p {
+    margin: 10px 0;
+}
+
+.contact-info .contact-details p strong {
+    font-weight: bold;
+}

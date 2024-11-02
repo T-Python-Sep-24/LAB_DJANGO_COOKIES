@@ -1,11 +1,32 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Properties{% endblock %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Our Properties</title>
 </head>
 <body>
-    <h1>properties pass</h1>
+    <main>
+        <!-- Section Title -->
+        <h1>Our Properties</h1>
+
+        <!-- Properties Section -->
+        <div class="properties-container">
+            {% for property in properties %}
+                <div class="property-card">
+                    <img src="{% static 'images/' %}{{ property.image }}" alt="{{ property.title }}">
+                    <h3>{{ property.title }}</h3>
+                    <button class="explore-btn">more</button>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}
 </body>
 </html>

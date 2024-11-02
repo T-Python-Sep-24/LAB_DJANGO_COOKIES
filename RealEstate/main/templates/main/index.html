@@ -1,11 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>index pass</h1>
-</body>
-</html>
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">FIND YOUR DREAMS</h1>
+        <p class="hero-description">Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+        <a href="{% url 'main:properties_view' %}"><button class="explore-btn">Explore Properties</button></a>
+    </div>
+</div>
+
+<div class="categories">
+    <div class="category-item">
+        <span class="material-icons category-icon">home</span>
+        <p>ALL</p>
+    </div>
+    <div class="category-item">
+        <span class="material-icons category-icon">location_city</span>
+        <p>PROPERTIES</p>
+    </div>
+    <div class="category-item">
+        <span class="material-icons category-icon">hotel</span>
+        <p>HOTEL</p>
+    </div>
+    <div class="category-item">
+        <span class="material-icons category-icon">villa</span>
+        <p>VILLA</p>
+    </div>
+</div>
+{% endblock %}
