@@ -49,9 +49,8 @@
 
 .container .logohover:hover {
     color: rgb(70, 118, 185);
-    font-size: 3em;
+    transform: scale(1.2);
     transition: all 0.3s;
-
 }
 
 /*Home page styling*/
@@ -121,12 +120,12 @@
 
 /* Animation */
 @keyframes titlemove {
-    0%{
+    0% {
         opacity: 0;
         transform: translate(20%, -25%) scale(0.2);
     }
 
-    50%{
+    50% {
         opacity: 1;
         transform: translate(0, 0) scale(1);
     }
@@ -134,10 +133,15 @@
 }
 
 /* Properties page styling*/
-.lightbody{
+.lightbody {
     background-color: rgb(243, 238, 228);
 }
 
-.darkbody{
+.darkbody {
     background-color: rgb(22, 22, 24);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
 }

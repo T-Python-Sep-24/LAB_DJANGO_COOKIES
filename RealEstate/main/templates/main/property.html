@@ -3,22 +3,31 @@
 
 {% block title %}Properties{% endblock %}
 
-{% block bodyclass %} lightbody {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darkbody {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightbody {% endif %} {% endblock %}
+{% block bodyclass %} lightbody {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darkbody {% elif
+'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightbody {% endif %} {% endblock %}
 
 {% block content %}
 
 <section>
-    <div class="container-md">
-        <div class="row justify-content-center">
-            <div class="col-sm-4 col-md-6">
-                <h1 class="display-1 f-phudu">properties</h1>
+    <div class="container-lg">
+        <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+            {% for property in properties %}
+            <div class="col">
+                <div class="card rounded-5 text-bg-light shadow {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} text-bg-dark {% elif
+                    'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} text-bg-dark {% endif %}">
+                    <img src="/static/images/{{property.image}}" style="height: 250px;" alt="villa"
+                        class="card-img-top img-fluid">
+                    <div class="card-body justify-content-end">
+                        <h5 class="card-title p-3">{{property.title}}</h5>
+                        <div class="d-flex flex-row-reverse px-3">
+                            <a href="#" class="row btn shadow rounded-pill bg-black text-white">More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-4 col-md-6">
-                
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
 
 {% endblock %}
-
