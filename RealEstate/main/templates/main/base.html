@@ -15,15 +15,15 @@
 
     <title>{% block title %}{% endblock %}</title>
 </head>
-
+<!-- Add a modifiable block here to change the body theme depending on the mode-->
 <body class="{% block bodyclass %} {% endblock %}">
 
     <header class="container-fluid py-4">
-        <!-- This navbar expands at large screens, screens smaller than that toggle the collapse property -->
-        <nav class="navbar navbar-expand-lg" aria-label="Floating nav">
-            <div class="container d-flex flex-row gap-4 justify-content-evenly">
+        <!-- This navbar expands at medium screens, screens smaller than that toggle the collapse property -->
+        <nav class="navbar navbar-expand-md" aria-label="Floating nav">
+            <div class="container d-flex flex-row gap-md-2 gap-lg-4 justify-content-evenly">
                 <!-- Brand name -->
-                <a class="navbar-brand f-phudu px-4 fw-semibold opacity-75 logohover {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} logodark {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} logolight {% endif %}" href="/">Home</a>
+                <a class="navbar-brand f-phudu px-md-2 px-lg-4 fw-semibold logohover logolight {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} logodark {% endif %}" href="/">Home</a>
 
                 <!-- Toggle button to display navbar on small screens -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -38,39 +38,39 @@
 
                     <!-- Middle nav -->
                     <ul
-                        class="shadow f-ubuntu navbar-nav mb-2 mb-lg-0 px-4 py-2 d-flex gap-4 align-items-center rounded-pill {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} bg-dark {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} bg-light {% endif %}">
+                        class="shadow f-ubuntu navbar-nav mb-2 mb-lg-0 px-md-3 px-lg-4 py-md-3 d-flex gap-md-3 gap-lg-5 align-items-center rounded-pill bg-light {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} bg-dark {% endif %}">
                         <li class="nav-item">
-                            <a class="linkHover {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
+                            <a class="linkHover lightlinks {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% endif %}"
                                 aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="linkHover {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
+                            <a class="linkHover lightlinks {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% endif %}"
                                 href="{% url 'main:propertyView' %}">Properties</a>
                         </li>
                         <li class="nav-item">
-                            <a class="linkHover {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
+                            <a class="linkHover lightlinks {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% endif %}"
                                 href="#">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="linkHover {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
+                            <a class="linkHover lightlinks {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% endif %}"
                                 href="#">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="linkHover {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %}"
+                            <a class="linkHover lightlinks {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% endif %}"
                                 href="{% url 'main:contactView' %}">Contact</a>
                         </li>
                     </ul>
                     <!-- End Nav -->
                     <div
-                        class="f-ubuntu display-mode px-4 py-2 d-flex align-items-center gap-1 {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %} ">
-                        <i class="material-symbols-outlined p-2">person</i>
+                        class="f-ubuntu display-mode px-sm-1 px-lg-4 py-2 d-flex align-items-center gap-1">
+                        <i class="material-symbols-outlined p-2 lightlinks {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% endif %}">person</i>
                         <a href=""
-                            class="linkHover {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% elif 'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightlinks {% endif %} p-2">Sign
-                            up</a>
-                        <a href="{% url 'main:modeView' 'light' %}?next={{request.path}}" class="linkHover links"><span
-                                class="material-symbols-outlined rounded-pill p-2{% if 'mode' not in request.COOKIES or 'mode' in request.COOKIES and request.COOKIES.mode != 'dark' %} activeiconlight {% else %} darklinks {% endif %}">light_mode</span></a>
-                        <a href="{% url 'main:modeView' 'dark' %}?next={{request.path}}" class="linkHover links"><span
-                                class="material-symbols-outlined rounded-pill p-2{% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} activeicondark {% else %} lightlinks {% endif %}">dark_mode</span></a>
+                            class="linkHover lightlinks p-md-2 {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% endif %}">
+                            Sign up</a>
+                        <a href="{% url 'main:modeView' 'light' %}?next={{request.path}}" ><span
+                                class="material-symbols-outlined rounded-pill p-2 modeicon {% if 'mode' not in request.COOKIES or 'mode' in request.COOKIES and request.COOKIES.mode != 'dark' %} activeiconlight {% else %} darklinks {% endif %}">light_mode</span></a>
+                        <a href="{% url 'main:modeView' 'dark' %}?next={{request.path}}"><span
+                                class="material-symbols-outlined rounded-pill p-2 modeicon {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} activeicondark {% else %} lightlinks {% endif %}">dark_mode</span></a>
                     </div>
                 </div>
             </div>

@@ -3,8 +3,7 @@
 
 {% block title %}Properties{% endblock %}
 
-{% block bodyclass %} lightbody {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darkbody {% elif
-'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} lightbody {% endif %} {% endblock %}
+{% block bodyclass %} lightbody {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darkbody {% endif %} {% endblock %}
 
 {% block content %}
 
@@ -13,8 +12,8 @@
         <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
             {% for property in properties %}
             <div class="col">
-                <div class="card rounded-5 text-bg-light shadow {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} text-bg-dark {% elif
-                    'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} text-bg-dark {% endif %}">
+                <div
+                    class="card rounded-5 text-bg-light shadow text-bg-light {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} text-bg-dark {% endif %}">
                     <img src="/static/images/{{property.image}}" style="height: 250px;" alt="villa"
                         class="card-img-top img-fluid">
                     <div class="card-body justify-content-end">

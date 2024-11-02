@@ -30,8 +30,14 @@
 }
 
 .linkHover:hover {
-    color: rgb(84, 145, 205);
+    color: rgb(112, 191, 231);
     font-size: 1.1em;
+    transition: all 0.3s;
+}
+
+.modeicon:hover {
+    color: rgb(112, 191, 231);
+    font-size: 1.8em;
     transition: all 0.3s;
 }
 
@@ -48,7 +54,7 @@
 }
 
 .container .logohover:hover {
-    color: rgb(70, 118, 185);
+    color: rgb(112, 191, 231);
     transform: scale(1.2);
     transition: all 0.3s;
 }
@@ -93,7 +99,7 @@
     font-weight: 600;
     line-height: 1em;
     color: rgba(0, 0, 0, 0.742);
-    animation: titlemove 2s ease-in;
+    animation: titlemove 1s ease-in;
 }
 
 .hometitledark {
@@ -101,7 +107,7 @@
     font-weight: 600;
     line-height: 1em;
     color: rgba(255, 255, 255, 0.849);
-    animation: titlemove 2s ease-in;
+    animation: titlemove 1s ease-in;
 }
 
 .homedescriptionlight {
@@ -129,12 +135,11 @@
         opacity: 1;
         transform: translate(0, 0) scale(1);
     }
-
 }
 
 /* Properties page styling*/
 .lightbody {
-    background-color: rgb(243, 238, 228);
+    background-color: rgb(255, 252, 247);
 }
 
 .darkbody {
@@ -144,4 +149,27 @@
 .btn:hover {
     transform: scale(1.1);
     transition: all 0.3s;
+}
+
+/* Contact page styling*/
+.contactlightbody {
+    background: url('../images/contactlight.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contactdarkbody {
+    background: url('../images/contactdark.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container .textlight {
+    color: rgb(22, 22, 24);
+}
+
+.container .textdark{
+    color: rgb(233, 233, 239);
 }
