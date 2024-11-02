@@ -10,20 +10,19 @@ body {
   color: #333;
 }
 
-body.dark{
+body.dark {
   background-color: #313131;
   color: white;
 }
 
-body.dark h1, body.dark h2 body.dark h3{
-  color:white;
-}
-
-body.dark p{
+body.dark h1,
+body.dark h2 body.dark h3 {
   color: white;
 }
 
-
+body.dark p {
+  color: white;
+}
 
 /* Based */
 
@@ -39,7 +38,6 @@ body.dark p{
   margin-top: 50px;
 }
 
-
 .top-container a {
   color: black;
   text-decoration: none;
@@ -47,18 +45,15 @@ body.dark p{
   font-weight: lighter;
   letter-spacing: 0.05rem;
   transition: color 0.5s ease, transform 1.5s ease;
-
 }
 
 .top-container.dark a {
   color: white;
-
 }
-
 
 .top-container a:hover {
   color: red;
-  transform: scale(1.15); 
+  transform: scale(1.15);
 }
 
 .mid-nav {
@@ -88,26 +83,22 @@ body.dark p{
   font-weight: normal;
   letter-spacing: 0.05rem;
   transition: color 0.3s ease;
-  
 }
 
 .mid-nav.dark a {
   color: white;
 }
 
-
 .mid-nav a:hover {
   color: red;
   transform: scale(1.15);
 }
-
 
 .last-nav {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
 
 .last-nav a {
   color: black;
@@ -124,7 +115,7 @@ body.dark p{
   display: flex;
   align-items: center;
   justify-content: center;
-  color:black;
+  color: black;
 }
 
 body.dark .last-nav .active-icon {
@@ -135,14 +126,12 @@ body.dark .last-nav .active-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  color:white;
+  color: white;
 }
-
 
 body.dark .last-nav a {
   color: white;
 }
-
 
 .material-symbols-outlined {
   color: black;
@@ -157,12 +146,9 @@ body.dark .material-symbols-outlined {
   color: red;
 }
 
-
 .last-nav a:hover {
   color: red;
 }
-
-
 
 /* Home */
 
@@ -187,11 +173,8 @@ body.dark .material-symbols-outlined {
   margin-bottom: 20px;
   text-align: left;
   opacity: 0;
-  transform: translateX(100%) scale(0.8); 
-  animation: slideIn 1.5s ease-out forwards; 
+  animation: titlemove 3s ease-in-out forwards;
 }
-
-
 
 .mid-text p {
   text-align: left;
@@ -205,7 +188,6 @@ body.dark .material-symbols-outlined {
 .mid-text.dark p {
   color: white;
 }
-
 
 .exbutton {
   justify-content: left;
@@ -228,7 +210,7 @@ body.dark .material-symbols-outlined {
 }
 
 .background-img {
-  background-image: url('/static/images/skyscraper.jpg');
+  background-image: url("/static/images/skyscraper.jpg");
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -263,11 +245,10 @@ body.dark .material-symbols-outlined {
   height: 100px;
   margin-top: 20px;
   margin-left: 300px;
-  z-index: 1000; 
-  
+  z-index: 1000;
 }
 
-body.dark .icon-group{
+body.dark .icon-group {
   background-color: #282828;
 }
 
@@ -292,31 +273,32 @@ body.dark .icon-group{
 
 .icon-text {
   font-size: 0.8em;
-  color:white;
+  color: white;
 }
 
 .icon-item .material-symbols-outlined {
-  font-size: 1.em;
+  font-size: 1em;
   color: white;
 }
 
 /* Animations */
 
-@keyframes slideIn {
+@keyframes titlemove {
   0% {
     opacity: 0;
-    transform: translateX(100%) scale(0.8); 
+    transform: translate(20%, -50%) scale(0.8);
   }
+
   50% {
-    opacity: 0.5;
-    transform: translateX(10%) scale(1);
+    opacity: 1;
+    transform: translate(0, 10px) scale(1);
   }
+
   100% {
     opacity: 1;
-    transform: translateX(0) scale(1); 
+    transform: translate(0, 0) scale(1);
   }
 }
-
 
 /* Properties */
 
@@ -397,7 +379,7 @@ body.dark .property {
 }
 
 .contact-section-imag {
-  background-image: url('/static/images/email.jpg');
+  background-image: url("/static/images/email.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -441,7 +423,7 @@ body.dark .property {
 }
 
 footer {
-  background-color: #EBEAE9;
+  background-color: #ebeae9;
   padding: 20px;
   position: fixed;
   bottom: 0;
@@ -449,6 +431,6 @@ footer {
 }
 
 body.dark footer {
-  background-color: #333; 
-  color: white;           
+  background-color: #333;
+  color: white;
 }
