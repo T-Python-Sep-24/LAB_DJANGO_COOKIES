@@ -47,12 +47,13 @@ html.dark-mode .navbar {
     font-weight: bold;
     color: black;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s ease-in-out;
 }
 
 .logo:hover {
-    color: red; /* Change text color on hover */
-
+    color: red; /* Change only the text color on hover */
+    transform: scale(1.05); /* Slight scaling effect for emphasis */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to enhance visibility */
 }
 
 html.dark-mode .logo {
@@ -60,7 +61,7 @@ html.dark-mode .logo {
 }
 
    /* Centered Navigation Menu */
-   .nav-menu {
+.nav-menu {
     list-style: none;
     display: flex;
     gap: 20px;
@@ -89,100 +90,6 @@ html.dark-mode .nav-menu a {
     color: #ddd;
 }
 
-/* General Dark Mode Styles */
-html.dark-mode {
-    background-color: #333; /* Dark background for the entire page */
-    color: #ddd; /* Light text color for readability */
-}
-
-/* Dark Mode Header and Navigation Styles */
-html.dark-mode header,
-html.dark-mode .navbar {
-    background-color: #333; /* Dark header and navbar */
-}
-
-html.dark-mode .nav-menu a,
-html.dark-mode .right-nav .icon-link {
-    color: #ddd; /* Light text color for links */
-}
-
-html.dark-mode .logo {
-    color: #ddd; /* Light color for logo in dark mode */
-}
-
-/* Footer in Dark Mode */
-html.dark-mode footer {
-    background-color: #333; /* Footer matches the entire dark mode background */
-    color: #bbb; /* Lighter color for footer text */
-}
-
-/* Dark Mode for Main Content */
-html.dark-mode main {
-    background-color: #333; /* Main content background in dark mode */
-    color: #ddd; /* Text color for better readability */
-}
-
-/* Dark Mode for Categories Section */
-html.dark-mode .categories {
-    background-color: #333; /* Dark background for categories section */
-    color: #ddd; /* Light text color */
-}
-
-html.dark-mode .category-item {
-    background-color: #444; /* Slightly lighter background for category items */
-    color: #ddd; /* Light text color */
-}
-
-html.dark-mode .category-icon {
-    color: #ddd; /* Light color for icons */
-}
-
-/* Dark Mode for Property Cards */
-html.dark-mode .property-card {
-    background-color: #444; /* Dark background for property cards */
-    color: #ddd; /* Light text for property details */
-}
-
-html.dark-mode .property-card h3 {
-    color: #ddd; /* Light color for property titles */
-}
-
-/* Dark Mode for Contact Section */
-html.dark-mode .contact-section {
-    background-color: #333; /* Dark background for the contact section */
-    color: #ddd; /* Light text for contact section */
-    background-image: none; /* Remove background image in dark mode for better readability */
-}
-
-html.dark-mode .contact-info {
-    background-color: rgba(50, 50, 50, 0.9); /* Darker transparent background for the contact info box */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-html.dark-mode .contact-link {
-    color: #77aaff; /* Softer blue for links in dark mode */
-}
-
-html.dark-mode .map iframe {
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Dark Mode for Buttons */
-html.dark-mode .explore-btn {
-    background-color: #444; /* Dark button background */
-    color: #ddd; /* Light button text color */
-}
-
-html.dark-mode .explore-btn:hover {
-    background-color: #555; /* Slightly lighter background on hover */
-}
-
-/* Dark Mode for Footer */
-html.dark-mode footer {
-    background-color: #333; /* Dark footer background */
-    color: #bbb; /* Light text color */
-}
 
 /* Right-side Icons */
 .right-nav {
@@ -258,13 +165,18 @@ html.dark-mode .explore-btn {
 .explore-btn:hover {
     background-color: #333;
 }
-/* Categories Section for Index Page */
+/* Categories Section */
 .categories {
     display: flex;
     justify-content: center;
     gap: 30px;
     margin: 40px 0;
     animation: slideUp 1s ease;
+}
+
+html.dark-mode .categories {
+    background-color: #333;
+    color: #ddd;
 }
 
 .category-item {
@@ -274,6 +186,11 @@ html.dark-mode .explore-btn {
 
 .category-item:hover {
     transform: scale(1.1);
+}
+
+html.dark-mode .category-item {
+    background-color: #444;
+    color: #ddd;
 }
 
 .category-icon {
@@ -296,11 +213,9 @@ footer {
 }
 
 html.dark-mode footer {
-    background-color: #222;
+    background-color: #333;
     color: #bbb;
 }
-
-
 
 /* Animations */
 @keyframes fadeIn {
@@ -322,6 +237,7 @@ html.dark-mode footer {
         opacity: 1;
     }
 }
+
 
 /* Properties Section */
 .properties-container {
@@ -363,15 +279,15 @@ html.dark-mode footer {
 
 .explore-btn {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: #fff;
     background-color: black;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 90px;
+    margin-left: 200px;
 }
 
 .explore-btn:hover {
