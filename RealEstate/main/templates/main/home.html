@@ -1,0 +1,71 @@
+{% extends 'main/base.html' %}
+{%load static %}
+{% block title %} Home {%endblock%}
+{%block styleFile %}
+<style>
+    .dark_mode{
+        background-image: url('static/images/skyscraper-dark.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .light_mode{
+        background-image: url('static/images/skyscraper.jpeg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .h2{
+    font-size: 16rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    h2{
+    color: transparent;
+    -webkit-text-stroke: #0e0e0e;
+    position: relative;
+     }
+    h2::before{
+    content: "FIND YOUR DREAMS";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    border-right: #272626;
+    transition: 1s ease-in-out;
+      }
+      h2:hover:before{
+    width: 100%;
+    filter: drop-shadow(0 0 25px rgb(91, 90, 91));
+        }
+</style>
+{%endblock%}
+{%block main %}
+<main> 
+    <div class="center-content"> 
+        <div class="pargarph-head"> 
+            <h2 {% if 'true' in request.COOKIES.dark_mode %} class="dark-content" {% endif %}> FIND YOUR DREAMS </h2>
+        </div>
+        <div {% if 'true' in request.COOKIES.dark_mode %} class="pargraph-dark" {% else %} class="pargraph" {% endif %}>
+             <p> Our catalog will suprise you. Rather, discover an unprecendented offers of luxury properties. Our catalog will suprise you. Rather, discover an unprecendented offers of luxury properties. + </p>
+            </div> 
+            <div class=""> 
+                <a href="{% url 'main:properties' %}"> 
+                    <input type="button" value="Expolore Properties" class="properties-btn"></a>
+                    </div>
+    </div>
+    <div class="bottom-nav">
+        <div {% if 'true' in request.COOKIES.dark_mode %} class="back-g-dark" {% else %} class="back-g" {% endif %}>
+            <div class="bottom-item" id="all-item">
+                <a href=""><span class="material-symbols-outlined"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg></span> all</a>
+            </div>
+            <div class="bottom-item" id="propreties-item">
+                <a href="{%url 'main:properties'%}"><span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M80-80v-481l280-119v80l200-80v120h320v480H80Zm80-80h640v-320H480v-82l-200 80v-78l-120 53v347Zm280-80h80v-160h-80v160Zm-160 0h80v-160h-80v160Zm320 0h80v-160h-80v160Zm280-320H680l40-320h120l40 320ZM160-160h640-640Z"/></svg></span> <br>properties</a>
+            </div>
+        <div class="bottom-item" id="hotel-item">
+             <a href=""> <span> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M40-200v-600h80v400h320v-320h320q66 0 113 47t47 113v360h-80v-120H120v120H40Zm240-240q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Zm240 40h320v-160q0-33-23.5-56.5T760-640H520v240ZM280-520q17 0 28.5-11.5T320-560q0-17-11.5-28.5T280-600q-17 0-28.5 11.5T240-560q0 17 11.5 28.5T280-520Zm0-40Zm240-80v240-240Z"/></svg></span> HOTEL</a> 
+            </div> 
+            <div class="bottom- item" id="villa-item">
+                <a href="" ><span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-120v-520l520-200v360h40q0-33 23.5-56.5T760-560q33 0 56.5 23.5T840-480v360H120Zm80-80h160v-280h200v-244L200-585v385Zm240 0h120v-120h80v120h120v-200H440v200ZM280-560Zm320 360Zm0-20Z"/></svg></span>Villa</a>
+                <a href="" {% if 'ture' in request.COOKIES.dark_mode%} class="txt-white" {% endif %}></a>
+                </div> 
+            </main>
+{% endblock %}
