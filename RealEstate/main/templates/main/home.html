@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+    <main>
+    <div class="title">
+        <h1>FIND YOUR DREAMS</h1>
+        <p class="decs">Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties, Explore our modern, luxurious properties catalog with variant choices.</p>
+        <a href="{% url 'main:properties_view' %}"><button class="btn">Explore Properties</button></a>
+    </div>
+
+
+    </main>
+{% endblock %}

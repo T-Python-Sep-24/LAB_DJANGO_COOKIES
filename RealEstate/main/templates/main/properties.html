@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Properties Page {% endblock %}
+{% block additional_styles %}
+    <style>
+        .light-wrapper {
+            background-image: none;
+            background-color: #ebeae9;
+
+        }
+    
+        .dark-wrapper {
+            background-image: none;
+            background-color: #2c2c2e;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <main>
+        <div class="props-main">
+            <h3 class="page-title">OUR PROPERTIES</h3>
+            <div class="props-container">
+               
+
+                {% for prop in properties %}
+                    <div class="prop-item">
+                        
+                        <h4 class="prop-title">{{ prop.title }}</h4>
+                        <button class="more-btn btn">more</button>
+                        <img src="{% static 'images' %}{{ property.image }}" alt="{{ property.title }}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+{% endblock %}
+{% block footer %}
+    <div></div>
+{% endblock %}

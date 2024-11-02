@@ -1,0 +1,448 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Phudu", sans-serif;
+    box-sizing: border-box;
+
+}
+
+/* Base Styles */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem 8rem 0rem 8rem;
+    align-items: center;
+
+}
+.light-wrapper .home-icon-link {
+    text-decoration: none;
+    color: black;
+    padding: 0 2rem;
+}
+
+.dark-wrapper .home-icon-link {
+    text-decoration: none;
+    color: white;
+    padding: 0 2rem;
+}
+
+.light-wrapper .home-icon-link:hover, .dark-wrapper .home-icon-link:hover {
+    transition: all 0.4s ease-in;
+    transform: scale(1.1);
+    color: red;
+}
+
+.home-icon {
+    font-size: 40px;
+    font-weight: 500;
+}
+.light-wrapper .top-nav-bar{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+
+    border-radius: 60px;
+    padding: 0.6rem 2rem;
+}
+.dark-wrapper .top-nav-bar{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+
+    border-radius: 60px;
+    padding: 0.6rem 2rem;
+}
+
+.light-wrapper .top-nav-bar a {
+    text-decoration: none;
+    color: black;
+    padding: 0.8rem 2rem;
+    font-size: 14px;
+    font-weight: 500;
+}
+.dark-wrapper .top-nav-bar a {
+    text-decoration: none;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.light-wrapper .top-nav-bar a:hover, .dark-wrapper .top-nav-bar a:hover {
+    transition: all 0.4s ease-in;
+    transform: scale(1.1);
+    color: red;
+}
+
+.page-settings{
+    display: flex;
+  
+    align-items: center;
+}
+.light-wrapper .page-settings a, .light-wrapper .page-settings span {
+    padding: 0.3rem;
+    color: black;
+
+}
+.light-wrapper .page-settings a:hover, .light-wrapper .page-settings span:hover, .dark-wrapper .page-settings a:hover, .dark-wrapper .page-settings span:hover{
+    color: red;
+    cursor: pointer;
+    transition: all 0.25s ease-in;
+    transform: scale(1.1);
+}
+.dark-wrapper .page-settings a, .dark-wrapper .page-settings span {
+    padding: 0.3rem;
+    color: white;
+}
+.light-wrapper .active-mode {
+    background-color: white;
+    border-radius: 50%;
+
+}
+.dark-wrapper .active-mode {
+    background-color: black;
+    border-radius: 50%;
+
+}
+footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 40rem;
+}
+.light-wrapper .bottom-nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: white;
+
+    border-radius: 80px;
+    padding: 0.5rem 2.3rem;
+    width: 40%;
+}
+.dark-wrapper .bottom-nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
+
+    border-radius: 80px;
+    padding: 0.5rem 2.3rem;
+    width: 40%;
+}
+.bottom-nav-bar div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    width: 90px;
+
+}
+.bottom-nav-bar div a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+
+
+}
+.bottom-nav-bar div span{
+
+    border-radius: 50%;
+    padding: 1rem;
+    margin-bottom: 7px;
+
+}
+
+.green span {
+    background-color: rgba(0,255,0,0.3);
+    color: rgb(0,256,0);
+}
+.green a {
+    color: rgb(0,255,0);
+}
+.orange span {
+    background-color: rgba(218, 154, 25, 0.3);
+    color: rgb(218, 154, 25);
+}
+.orange a {
+    color: rgb(218, 154, 25);
+}
+.pink span {
+    background-color: rgba(197, 76, 199, 0.42);
+    color: rgb(197, 76, 199);
+}
+.pink a {
+    color: rgb(197, 76, 199);
+}
+.purple span {
+    background-color: rgba(95, 45, 205, 0.6);
+    color: rgb(95, 45, 205);
+}
+.purple a {
+    color: rgb(95, 45, 205);
+}
+
+.light-wrapper {
+
+    min-height: 100vh;
+    width: 100%;
+
+    background-image: url('/static/images/skyscraper.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+/* end light base page styles */
+.dark-wrapper {
+
+    min-height: 100vh;
+    width: 100%;
+
+    background-image: url('/static/images/skyscraper-dark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    position: relative;
+}
+
+/* main page styles */
+main {
+    padding: 0;
+    margin: 0;
+}
+
+.light-wrapper .title {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 10rem;
+    width: 70%;
+    color: black;
+}
+.dark-wrapper .title {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 10rem;
+    width: 70%;
+    color: white;
+}
+
+.title h1 {
+    font-weight: 500;
+    font-size: 7.8rem;
+    animation: scaleIn 0.7s ease-in;
+}
+
+.title p {
+    font-size: 18px;
+    padding: 2rem 6px;
+}
+.title a {
+    padding-left: 6px;
+}
+.btn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    padding: 7px 28px;
+}
+.btn:hover {
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+    transform: scale(1.04);
+    color:red;
+
+
+}
+
+
+@keyframes scaleIn {
+     0% {
+         opacity: 0;
+         transform: scale(0);
+     }
+     10% {
+         transform: scale(0.1);
+     }
+     20% {
+         transform: scale(0.2);
+     }
+
+     60% {
+         transform: scale(0.3);
+     }
+     70% {
+         transform: scale(1.1);
+     }
+
+     100% {
+         opacity: 1;
+         transform: scale(1);
+     }
+ }
+
+/* Properties page Styles */
+.props-container {
+  display: flex;
+  height:100%;
+  width: 100%;
+  min-height: auto;
+  margin: 0 3rem;
+  gap: 2rem;
+  padding: 25px 3.8rem;
+  flex-wrap: wrap;
+}
+.light-wrapper .page-title{
+    color: black;
+    padding: 0rem 7rem;
+    font-size: 1.9rem;
+    font-weight: 400;
+
+}
+.dark-wrapper .page-title{
+    color: white;
+    padding: 0rem 7rem;
+    font-size: 1.9rem;
+    font-weight: 400;
+
+}
+.props-main{
+    margin: 3rem;
+}
+.light-wrapper .prop-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    min-height: 12rem;
+    width: 30%;
+    height: 20%;
+    background-color: #e2e1e1;
+}
+.dark-wrapper .prop-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    min-height: 12rem;
+    width: 30%;
+    height: 20%;
+    background-color: #414143;
+}
+
+.prop-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+
+}
+
+.light-wrapper .prop-title {
+    color: black;
+    padding-left: 15px;
+    padding-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.dark-wrapper .prop-title {
+    color: white;
+    padding-left: 15px;
+    padding-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.more-btn {
+
+    width: 22%;
+    cursor: pointer;
+    margin: 0.3rem 0 1rem 0;
+    position:relative;
+    left: 18rem;
+}
+
+/* contacts Styles */
+.contacts-main{
+    display: flex;
+    flex-direction: column;
+    margin: 3.5rem 5rem;
+
+}
+.light-wrapper .section-title {
+
+    padding: 0rem 5rem;
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: black;
+
+}
+.dark-wrapper .section-title {
+
+    padding: 0rem 5rem;
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: white;
+
+}
+.contact-container{
+    display: flex;
+    flex--direction: row;
+    margin: 4rem;
+}
+.contact-section {
+
+    padding: 40px;
+    border-radius: 15px;
+    width: 50%;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.light-wrapper .contact-item {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: black;
+}
+.dark-wrapper .contact-item {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: white;
+}
+
+.light-wrapper .contact-item a {
+    color: black;
+    text-decoration: none;
+}
+.dark-wrapper .contact-item a {
+    color: white;
+    text-decoration: none;
+}
+/* map style */
+.map-container {
+    width: 80%;
+    height: 400px;
+    padding-top: 20px;
+
+}
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+.contact-section {
+    padding: 20px;
+}
