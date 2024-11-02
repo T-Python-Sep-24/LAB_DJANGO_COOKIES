@@ -7,6 +7,11 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* General Dark Mode Styles */
+html.dark-mode {
+    background-color: #333; /* Dark background for the entire page */
+    color: #ddd; /* Light text color for readability */
+}
 
 /* Header and Navigation */
 header {
@@ -26,11 +31,15 @@ html.dark-mode header {
     justify-content: space-between;
     max-width: 700px;
     margin: 0 auto;
-    background-color: #fff; /* Adjust to your design */
+    background-color: #fff; 
     transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     padding: 20px 30px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 40px;
+}
+
+html.dark-mode .navbar {
+    background-color: #333;
 }
 
 .logo {
@@ -39,10 +48,11 @@ html.dark-mode header {
     color: black;
     text-decoration: none;
     transition: color 0.3s;
-    
 }
-.logo:hover{
-    background-color: red;
+
+.logo:hover {
+    color: red; /* Change text color on hover */
+
 }
 
 html.dark-mode .logo {
@@ -50,13 +60,12 @@ html.dark-mode .logo {
 }
 
    /* Centered Navigation Menu */
-.nav-menu {
+   .nav-menu {
     list-style: none;
     display: flex;
     gap: 20px;
     justify-content: center;
     margin: 0;
-
 }
 
 .nav-menu li {
@@ -65,33 +74,21 @@ html.dark-mode .logo {
 }
 
 .nav-menu li:hover {
-    transform: translateY(-5px); /* Move up slightly on hover */
+    transform: translateY(-5px);
 }
 
-
-.navbar a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-.navbar a:hover {
-    color: #000; /* Darker color on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
-}
 .nav-menu a {
-    text-decoration: none;
     color: #333;
+    text-decoration: none;
     font-weight: bold;
     font-size: 18px;
     transition: color 0.3s;
-
 }
 
 html.dark-mode .nav-menu a {
     color: #ddd;
 }
+
 /* General Dark Mode Styles */
 html.dark-mode {
     background-color: #333; /* Dark background for the entire page */
@@ -187,8 +184,9 @@ html.dark-mode footer {
     color: #bbb; /* Light text color */
 }
 
+/* Right-side Icons */
 .right-nav {
-    align-items:center;
+    align-items: center;
     justify-content: space-between;
     display: flex;
     gap: 15px;
@@ -203,18 +201,24 @@ html.dark-mode footer {
     transition: color 0.3s;
 }
 
+html.dark-mode .icon-link {
+    color: #ddd;
+}
+
 .icon-link .material-icons {
     margin-right: 5px;
 }
 
-html.dark-mode .icon-link {
-    color: #ddd;
-}
 
 /* Main Content */
 main {
     padding: 20px;
     text-align: center;
+}
+
+html.dark-mode main {
+    background-color: #333; 
+    color: #ddd; 
 }
 
 .hero-content {
@@ -227,7 +231,6 @@ main {
     font-size: 64px;
     font-weight: bold;
     margin: 0;
-    
 }
 
 .hero-description {
@@ -247,10 +250,14 @@ main {
     transition: background-color 0.3s ease;
 }
 
+html.dark-mode .explore-btn {
+    background-color: #444;
+    color: #ddd;
+}
+
 .explore-btn:hover {
     background-color: #333;
 }
-
 /* Categories Section for Index Page */
 .categories {
     display: flex;
@@ -440,3 +447,80 @@ html.dark-mode footer {
 .contact-info .contact-details p strong {
     font-weight: bold;
 }
+
+/* Categories Section for Index Page */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    animation: slideUp 1s ease;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.category-item:hover {
+    transform: scale(1.1);
+}
+
+/* Colorful Icons with Rounded Backgrounds */
+.category-icon {
+    font-size: 50px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Custom Colors for Each Category */
+.category-item:nth-child(1) .category-icon {
+    background-color: #a8e6cf; /* Light green for ALL */
+    color: #006400; /* Dark green text */
+}
+
+.category-item:nth-child(2) .category-icon {
+    background-color: #ffd3b6; /* Light orange for PROPERTIES */
+    color: #8b4513; /* Saddle brown text */
+}
+
+.category-item:nth-child(3) .category-icon {
+    background-color: #ffb6c1; /* Light pink for HOTEL */
+    color: #c71585; /* Medium violet red text */
+}
+
+.category-item:nth-child(4) .category-icon {
+    background-color: #c3cde6; /* Light blue for VILLA */
+    color: #00008b; /* Dark blue text */
+}
+
+/* Category Text Styling */
+.category-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+html.dark-mode .category-item p {
+    color: #ddd;
+}
+
+/* Dark Mode for Categories Section */
+html.dark-mode .categories {
+    background-color: #333;
+}
+
+html.dark-mode .category-icon {
+    background-color: #444; /* Darker background for icons in dark mode */
+    color: #ddd; /* Light color for icons in dark mode */
+}
+
