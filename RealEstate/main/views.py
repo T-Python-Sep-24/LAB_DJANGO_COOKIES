@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpRequest, HttpResponse
 
 # Create your views here.
@@ -24,3 +24,18 @@ def propertie_view(request):
 def contact_view(request:HttpRequest):
 
     return render(request, "main/contact.html")
+
+
+def mode_view(request:HttpRequest, mode):
+    
+    response = redirect(request.GET.get("next", "/"))
+
+    if mode == "light":
+        response.set_cookie("mode", "light")
+        
+    elif mode == "dark":
+        response.set_cookie("mode", "dark")
+
+
+    return response
+

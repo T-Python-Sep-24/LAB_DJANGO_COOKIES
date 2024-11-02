@@ -8,11 +8,43 @@
 
 <main>
     <div class="top-text-container">
-      <div class="background-img"></div>
         <h1>FIND YOUR DREAMS</h1>
         <div class="mid-text">
           <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
-          <button class="exbutton">Expolore Properties</button>
+          <a class="exbutton" href="{% url 'main:propertie_view'%}">Expolore Properties</a>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="icon-group">
+          <div class="icon-item">
+            <span class="icon-circle" style="background-color: #8BC34A;">
+              <span class="material-symbols-outlined">home</span>
+            </span>
+            <span class="icon-text" style="color: #8BC34A;">ALL</span>
+          </div>
+
+          <div class="icon-item">
+            <span class="icon-circle" style="background-color: #FF9800;">
+              <span class="material-symbols-outlined">Holiday_Village</span>
+            </span>
+            <span class="icon-text" style="color: #FF9800;">PROPERTIES</span>
+          </div>
+
+
+          <div class="icon-item">
+            <span class="icon-circle" style="background-color: #E91E63;">
+              <span class="material-symbols-outlined">hotel</span>
+            </span>
+            <span class="icon-text" style="color: #E91E63;">HOTEL</span>
+          </div>
+
+
+          <div class="icon-item">
+            <span class="icon-circle" style="background-color: #3F51B5;">
+              <span class="material-symbols-outlined">villa</span>
+            </span>
+            <span class="icon-text" style="color: #3F51B5;">VILLA</span>
+          </div>
         </div>
 </main>
 

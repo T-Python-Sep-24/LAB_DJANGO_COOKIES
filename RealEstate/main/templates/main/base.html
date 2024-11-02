@@ -8,46 +8,41 @@
     <title>{% block title %}Home{% endblock %}</title>
 
     <link rel="stylesheet" href="/static/css/styles.css" />
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" el="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" el="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" />
 
   </head>
-  <body>
-
+  <body {% if "mode" in request.COOKIES and request.COOKIES.mode == "dark" %}class="dark"{% endif %}>
     <header>
-        
-        <div class="top-container">
-            <h1>HOME</h1>
-            <nav class="mid-nav">
-                <a href="{% url 'main:main_view'%}">Home</a>
-                <a href="{% url 'main:propertie_view'%}">Properties</a>
-                <a href="#">Services</a>
-                <a href="#">About</a>
-                <a href="{% url 'main:contact_view'%}">Contact</a>
-            </nav>
-            
-            <div class="last-nav">
-                <a href="#"><span class="material-symbols-outlined">Person</span></a>
-                <a href="#">Sign Up</a>
-                <a href="#"><span class="material-symbols-outlined">light_mode</span></a>
-                <a href="#"><span class="material-symbols-outlined">dark_mode</span></a>
+      <div class="top-container">
+        <a href="/"><h1 class="logo">HOME</h1></a>
+        <nav class="mid-nav">
+          <a href="{% url 'main:main_view'%}">Home</a>
+          <a href="{% url 'main:propertie_view'%}">Properties</a>
+          <a href="#">Services</a>
+          <a href="#">About</a>
+          <a href="{% url 'main:contact_view'%}">Contact</a>
+        </nav>
+
+        <div class="last-nav">
+          <a href="#"><span class="material-symbols-outlined">Person</span></a>
+          <a href="#">Sign Up</a>
+          <a href="{% url 'main:mode_view' 'light' %}?next={{request.path}}" class="nav-link"><span class="material-symbols-outlined {% if 'mode' not in request.COOKIES or 'mode' in request.COOKIES and request.COOKIES.mode != 'dark' %} active-icon {% endif %}">light_mode</span></a>
+          <a href="{% url 'main:mode_view' 'dark' %}?next={{request.path}}" class="nav-link"><span class="material-symbols-outlined {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} active-icon {% endif %}">dark_mode</span></a>
+        </div>
       </div>
-    </div>
     </header>
 
-    <main>
-
-        {% block content %} {% endblock %}</div>
-
-    </main>
+    <main>{% block content %} {% endblock %}</main>
 
     <footer>
-
+      <div></div>
     </footer>
-</body>
+
+
+  </body>
 </html>
