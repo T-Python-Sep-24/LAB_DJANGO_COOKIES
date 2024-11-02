@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}contact-page | Real Estate{% endblock %}
+{% block content %}
+
+<body class="{% block body_class %}contact-page{% endblock %}">
+    
+
+<div class="contact-page-container">
+
+
+    <div class="contact-info">
+        <h2>CONTACT US</h2>
+        <p><strong>TELEPHONE:</strong> <a href="tel:+96657263883764">+966 57263883764</a></p>
+        <p><strong>EMAIL:</strong> <a href="mailto:info@realestate.com">info@realestate.com</a></p>
+        <p><strong>ADDRESS:</strong></p>
+        <address>
+            ANAS BIN MALIK, RIYADH<br>
+            BUILDING W-112<br>
+            SAUDI ARABIA
+        </address>
+    </div>
+    
+
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.9877623648454!2d46.64119691501794!3d24.761565684105137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03873b3b3b2b%3A0x9915fd8d8f24cb43!2sAnas%20Bin%20Malik%2C%20Riyadh%2013524%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+
+</div>
+
+</body>
+{% endblock %}
