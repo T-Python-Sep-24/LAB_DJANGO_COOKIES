@@ -1,0 +1,169 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ body{
+    background-image: url('/static/images/skyscraper-dark.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+ }
+ 
+ .phudu-phudu-font {
+   font-family: "Phudu", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 500;
+   font-style: normal;
+ }
+
+.main_background{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 9vh;
+    background-color: #313131;
+}
+
+.main_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(250, 235, 215, 0);
+}
+
+.main_content h1{
+    font-size: 2rem;
+    color: white;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    padding: 3rem 7rem;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    gap: 2.5rem;
+    background-color:#282828;
+    border-radius: 3rem;
+    text-decoration: none;
+    padding: 1.2rem 4.2rem;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 0.7rem;
+    font-weight:500;
+}
+
+.side-navbar{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.side-navbar a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 0.7rem;
+    font-weight:500;
+}
+.side-navbar span{
+    font-size: 1rem;
+    padding: 0.3rem;
+    color: rgb(255, 255, 255);
+}
+
+.side-navbar .active-icon{
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: start;
+    text-align: start;
+    margin-right: 46%;
+    margin-left: 10.5%;
+}
+
+.content h1{
+    font-size: 6rem;
+    color: white;
+}
+
+.content p{
+    font-size: 0.7rem;
+    font-weight:500;
+    color: white;
+}
+
+.content a{
+    font-size: 0.7rem;
+    font-weight:500;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    padding: 0.3rem 1.5rem;
+    border-radius: 60px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    width: 25rem;
+    align-self: center;
+    align-items: center;
+    margin-bottom: 0.2rem;
+    background-color: #282828;
+    border-radius: 80px;
+    padding: 2.2rem 3rem;
+    box-shadow: 0 1px 2px 0 rgba(62, 62, 62, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer a{
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight:500;
+}
+footer span{
+    border-radius: 80px;
+    padding: 0.5rem;
+}
+.green-house{
+    background-color: #c6eabf;
+    color:#48c12e ;
+}
+.brown-factory{
+    background-color: #ead5bc;
+    color: #b97912; 
+}
+.pink-hotel{
+    background-color: #f1beed;
+    color: #cd23c5;
+}
+.blue-villa{
+    background-color: #b8bcef;
+    color: #1d21c7;
+}

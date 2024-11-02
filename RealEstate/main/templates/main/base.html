@@ -1,0 +1,44 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link {%if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} href="{%static 'css/darkstyle.css'%}" rel="stylesheet" {%else%} href="{%static 'css/style.css'%}" rel="stylesheet" {%endif%}/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    {%block style%}{%endblock%}
+    {%block title%}<title>Home</title>{%endblock%}
+</head>
+<body> <!--background-->
+     <main class="main_background"></main>
+    
+    
+     <!--main content-->
+    <main class="main_content">
+        <!--nav-->
+        <nav>
+            <h1 class="phudu-phudu-font">HOME</h1>
+            <div class="navbar">
+                <a href="{%url 'main:home_view'%}">Home</a>
+                <a href="{%url 'main:properties_view'%}">Properites</a>
+                <a href="">Services</a>
+                <a href="">About</a>
+                <a href="{%url 'main:contact_view'%}">Contact</a>
+            </div>
+            <div class="side-navbar">
+                <span class="material-symbols-outlined">person</span>
+                <a href="">Sign up</a>
+                <a href="{%url 'main:mode_view' 'light' %}?current={{request.path}}"><span class="material-symbols-outlined {%if not 'mode' in request.COOKIES or 'mode' in request.COOKIES and request.COOKIES.mode != 'dark' %}active-icon {%endif%}">light_mode </span></a>
+                <a href="{%url 'main:mode_view' 'dark' %}?current={{request.path}}"><span class="material-symbols-outlined {%if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %}active-icon {%endif%}">dark_mode</span></a>
+            </div>
+        </nav>
+        {%block content%}
+
+        {%endblock%}
+
+    </main>
+</body>
+</html>
