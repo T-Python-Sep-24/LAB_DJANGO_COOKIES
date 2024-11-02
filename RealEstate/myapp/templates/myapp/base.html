@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}RealEstate{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'myapp/styles/style.css' %}">
+</head>
+<body class="{% if request.COOKIES.mode == 'dark' %}dark{% else %}light{% endif %}">
+    <header>
+        <!-- Centered Navigation Links -->
+        <nav class="center-nav">
+            <a href="{% url 'myapp:home' %}">Home</a>
+            <a href="{% url 'myapp:properties_list' %}">Properties</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="{% url 'myapp:contact' %}">Contact</a>
+        </nav>
+        
+        <div class="right-icons">
+            <div class="icon">
+                <a href=# title="Account">👤</a>
+            </div>
+            <a href=# class="sign-up-link" title="Sign Up">Sign Up</a>
+            <div class="mode-toggle">
+                {% if request.COOKIES.mode == 'dark' %}
+                    <a href="{% url 'myapp:mode_view' 'light' %}?next={{ request.path }}" class="sun-icon" title="Switch to Light Mode">☀️</a>
+                {% else %}
+                    <a href="{% url 'myapp:mode_view' 'dark' %}?next={{ request.path }}" class="moon-icon" title="Switch to Dark Mode">🌙</a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+        {% block content %}
+        <!-- Content for each page goes here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <nav class="category-nav">
+            <div class="category-item">
+                <span class="category-icon">🏠</span>
+                <span class="category-label">ALL</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">🏢</span>
+                <span class="category-label">PROPERTIES</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">🏨</span>
+                <span class="category-label">HOTEL</span>
+            </div>
+            <div class="category-item">
+                <span class="category-icon">🏡</span>
+                <span class="category-label">VILLA</span>
+            </div>
+        </nav>
+    </footer>
+</body>
+</html>

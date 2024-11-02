@@ -1,0 +1,35 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Contact Us | RealEstate{% endblock %}
+
+{% block content %}
+{% load static %}
+<section class="contact" style="background-image: url('{% static 'myapp/images/email.jpg' %}'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 2em;">
+    
+    <div class="contact-content" style="display: flex; gap: 2em; align-items: flex-start; max-width: 1200px; margin: 80px auto;">
+        <div class="contact-info" style="flex: 1; font-size: 1.1em; line-height: 1.6; color: #333;">
+            
+            <h2 style="font-size: 1.5em; color: #333; margin: 0 0 1em 0;">CONTACT US</h2>
+            
+            <p><strong>TELEPHONE:</strong> <a href="tel:+9665726383764" style="color: #1a73e8; text-decoration: none;">+966 57263883764</a></p>
+            <p><strong>EMAIL:</strong> <a href="mailto:info@realestate.com" style="color: #1a73e8; text-decoration: none;">info@realestate.com</a></p>
+            <p><strong>ADDRESS:</strong></p>
+            <p>
+                ANAS BIN MALIK, RIYADH<br>
+                BUILDING W-112<br>
+                SAUDI ARABIA
+            </p>
+        </div>
+
+        <div class="map" style="flex: 1; max-width: 600px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <!-- Google Maps embed -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.47190557256!2d46.67283421500147!3d24.71355128411453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efea4b33e4535%3A0x7c1a3e7c4b6786f!2sAnas%20bin%20Malik%20St%2C%20Riyadh%2012483%2C%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1616402825064!5m2!1sen!2ssa" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Home | RealEstate{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">FIND YOUR DREAMS</h1>
+        <p class="hero-subtitle">
+            Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+        </p>
+        <a href="{% url 'myapp:properties_list' %}" class="explore-button">Explore Properties</a>
+    </div>
+</section>
+
+
+{% endblock %}

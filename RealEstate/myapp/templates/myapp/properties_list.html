@@ -1,0 +1,18 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Properties | RealEstate{% endblock %}
+
+{% block content %}
+{% load static %}
+    <section class="properties">
+        <h2>Available Properties</h2>
+        <div class="property-list">
+            {% for property in properties %}
+                <div class="property-item">
+                    <img src="{% static 'myapp/images/'|add:property.image %}" alt="{{ property.title }}">
+                    <h3>{{ property.title }}</h3>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
