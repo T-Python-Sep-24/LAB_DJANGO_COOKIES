@@ -12,15 +12,15 @@
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
-    <header>
-        <h1 class="Phudu">HOME</h1>
+    <header {% if 'mode' in request.COOKIES %} class="dark_header" {% endif %}>
+        <h1 class="phudu">HOME</h1>
         
         <nav>
-            <a href="">Home</a>
-            <a href="">Properties</a>
-            <a href="">Services</a>
-            <a href="">About</a>
-            <a href="">Contact</a>
+            <a href="{%url 'cooky:home_view'%}">Home</a>
+            <a href="{%url 'cooky:property_view'%}">Properties</a>
+            <a href="{%url 'cooky:contact_view'%}">Services</a>
+            <a href="{%url 'cooky:contact_view'%}">About</a>
+            <a href="{%url 'cooky:contact_view'%}">Contact</a>
         </nav>
 
         <section>
@@ -28,11 +28,11 @@
                 <span class="material-symbols-outlined">person</span>
             </a>
             <a href="">Sign up</a>
-            <a href="">
-                <span class="material-symbols-outlined active-mode">light_mode</span>
+            <a href="{%url 'cooky:light_view'%}?next={{request.path}}">
+                <span class="material-symbols-outlined {% if not 'mode' in request.COOKIES %} active-mode {% endif %}">light_mode</span>
             </a>
-            <a href="">
-                <span class="material-symbols-outlined">dark_mode</span>
+            <a href="{%url 'cooky:dark_view'%}?next={{request.path}}">
+                <span class="material-symbols-outlined {% if 'mode' in request.COOKIES %} active-mode {% endif %}">dark_mode</span>
             </a>
         </section>
     </header>
@@ -43,6 +43,6 @@
     {% endblock %}
     <!-- </main> -->
 
-    <footer></footer>
+    <footer {% if 'mode' in request.COOKIES %} class="dark_footer" {% endif %}></footer>
 </body>
 </html>

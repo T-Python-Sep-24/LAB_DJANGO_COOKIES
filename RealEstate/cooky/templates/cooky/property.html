@@ -1,0 +1,30 @@
+{% extends 'cooky/base.html' %}
+
+{% block title %} Properties Page {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<div {% if 'mode' in request.COOKIES %} class="prop_dark_mode" {% else %} class="prop_mode" {% endif %}>
+    <div class="adjust_main_prop">
+        <h2 class="phudu">OUR PROPERTIES</h2>
+        <div class="prop_main">
+            {% for property in properties %}
+                <div class="prop">
+                    <div class="prop_pic">
+                        <img src="/static/images/{{ property.image }}" alt="{{ property.title }}" />
+                    </div>
+                    <div class="prop_main_footer">
+                        <h2 class="phudu">{{ property.title }}</h2>
+                        <a href="{%url 'cooky:contact_view'%}">
+                            <button>More</button>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

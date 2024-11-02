@@ -8,10 +8,9 @@ body {
     font-weight: 600;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-    /* background-color: antiquewhite; */
 }
 
-.Phudu {
+.phudu {
     /* <weight>: Use a value from 300 to 900 */
     font-family: "Phudu", sans-serif;
     font-optical-sizing: auto;
@@ -35,15 +34,23 @@ header a{
     color: black;
 }
 
-header .active-mode {
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 43px; 
-    height: 43px; */
-    border-radius: 50%;
-    background-color: black;
+.dark_header a{
     color: white;
+}
+
+.dark_header h1 {
+    color: white;
+}
+
+.dark_header nav {
+    background-color: rgb(34, 34, 34);
+}
+
+.active-mode {
+    border-radius: 50%;
+    background-color: rgb(28, 28, 28);
+    color: white;
+    padding: 4px;
 }
 
 nav {
@@ -70,9 +77,21 @@ footer {
     background-color: rgb(232, 232, 232);
 }
 
-.main_div {
+.dark_footer {
+    background-color: rgb(57, 57, 57);
+}
+
+.light_pic {
     flex: 1;
     background-image: url("/static/images/skyscraper.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dark_pic {
+    flex: 1;
+    background-image: url("/static/images/skyscraper-dark.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -101,6 +120,13 @@ footer {
     margin-bottom: 10px;
 }
 
+.dark_pic h1{
+    color: white;
+}
+
+.dark_pic p{
+    color: white;
+}
 
 .main_home button {
     margin-top: 10px;
@@ -128,6 +154,10 @@ footer {
     z-index: 1000;
 }
 
+.dark_nav_home {
+    background-color: rgb(40, 40, 40);
+}
+
 .nav_home a {
     display: flex;
     flex-direction: column;
@@ -145,4 +175,97 @@ footer {
     height: 43px;
     border-radius: 50%;
 }
+
+.prop_mode {
+    flex: 1;
+    background-color: antiquewhite;
+}
+
+.prop_dark_mode {
+    flex: 1;
+    background-color: rgb(68, 54, 54);
+    color: white;
+}
+
+.adjust_main_prop {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-top: 9rem;
+    margin-left: 10%;
+}
+
+.prop_main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:flex-start;       
+}
+
+.prop_pic img {
+    width: 100%;                
+    height: 300px;        
+}
+
+.prop {
+    border-radius: 10px;
+    width: 400px;                
+    height: 310x;               
+    margin: 30px;        
+    overflow: hidden;
+}
+
+.prop_main_footer {
+    padding: 5px;
+    background-color: rgb(207, 207, 207);
+    border-end-start-radius: 10px;
+    border-end-end-radius: 10px;
+}
+
+.prop_dark_mode .prop_main_footer {
+    background-color: rgb(48, 48, 48);
+}
+
+.prop_main_footer h2{
+    text-align: center;
+}
+
+.prop_main_footer button {
+    margin-left: 35%;
+    border-radius: 20px;
+    padding:10px 3rem;
+    color: white;
+    background-color: black;
+    font-size: 17px;
+}
+
+.contact_mode {
+    flex: 1;
+    background-image: url("/static/images/email.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.adjust_main_contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 13rem;
+    gap: 30rem;
+}
+
+.contact_dark_mode {
+    color: white;
+}
+
+.google {
+    width: 100%; 
+    max-width: 900px; 
+    height: 400px;  
+    overflow: hidden;
+    border-radius: 30px;
+    margin-right: 3rem;
+}
+
 

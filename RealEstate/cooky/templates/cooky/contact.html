@@ -1,0 +1,33 @@
+{% extends 'cooky/base.html' %}
+
+{% block title %} Contact Page {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<div {% if 'mode' in request.COOKIES %} class="contact_dark_mode contact_mode" {% else %} class="contact_mode" {% endif %}>
+    <div class="adjust_main_contact">
+        <div class="text">
+            <h2 class="phudu" style="margin-bottom: 60px;">Contact Us</h2>
+            <h3 class="phudu">telephone +966 500426237</h3>
+            <h3 class="phudu">address</h3>
+            <pre class="phudu">Anas bin malik. riyadh
+bulding w-112
+saudi arabia
+            </pre>
+        </div>
+        <div class="google">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.158163543631!2d46.710342775151815!3d24.854047477933428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efbd2d9c324c7%3A0x9124f530f1b56443!2sTuwaiq%20Academy!5e1!3m2!1sen!2ssa!4v1730583906389!5m2!1sen!2ssa"
+             width="900"
+              height="450"
+               style="border:0;"
+                allowfullscreen=""
+                 loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -6,53 +6,53 @@
 
 {% load static %}
 
-<!-- <div class="background-image"> -->
-    <div class="main_div">
-        <div class="adjust_main_home">
-            <div class="main_home">
-                <h1 class="main_home-h1">
-                    Find Your Dreams
-                </h1>   
-                <p>
-                    Our catalog will surprise you.
+<div {% if 'mode' in request.COOKIES %} class="dark_pic" {% else %} class="light_pic" {% endif %}>
+    <div class="adjust_main_home">
+        <div class="main_home">
+            <h1 class="main_home-h1">
+                Find Your Dreams
+            </h1>   
+            <p>
+                Our catalog will surprise you.
+                Rather,
+                discover an unprecedented offers of luxury properties.
+                Our catalog will surprise you.
                     Rather,
-                    discover an unprecedented offers of luxury properties.
-                    Our catalog will surprise you.
-                        Rather,
-                        discover an unprecedented offers of luxury properties. 
-                </p>
+                    discover an unprecedented offers of luxury properties. 
+            </p>
+            <a href="{%url 'cooky:property_view'%}">
                 <button>Explore Properties</button>
-            </div>
-            <div style="width: 30%;"></div>
+            </a>
         </div>
+        <div style="width: 30%;"></div>
     </div>
+</div>
 
-    <div class="nav_home">
-        <a href="" style="color: rgb(55, 203, 55);">
-            <span class="material-symbols-outlined" style="background-color: rgba(121, 253, 121, 0.549);">
-                house
-            </span>
-            ALL
-        </a>
-        <a href="" style="color:rgb(172, 112, 34);">
-            <span class="material-symbols-outlined" style="background-color:rgba(235, 182, 114, 0.633);">
-                factory
-            </span>
-            PROPERTIES
-        </a>
-        <a href="" style="color: rgb(255, 62, 127);">
-            <span class="material-symbols-outlined" style="background-color: rgba(242, 109, 154, 0.532);">
-                hotel
-            </span>
-            HOTEL
-        </a>
-        <a href="">
-            <span class="material-symbols-outlined" style="background-color: rgba(65, 43, 139, 0.419);">
-                hotel
-            </span>
-            VILLA
-        </a>
-    </div>
-<!-- </div> -->
+<div {% if 'mode' in request.COOKIES %} class="nav_home dark_nav_home" {% else %} class="nav_home" {% endif %}>
+    <a href="{%url 'cooky:property_view'%}" style="color: rgb(55, 203, 55);">
+        <span class="material-symbols-outlined" style="background-color: rgba(121, 253, 121, 0.549);">
+            house
+        </span>
+        ALL
+    </a>
+    <a href="{%url 'cooky:property_view'%}" style="color:rgb(172, 112, 34);">
+        <span class="material-symbols-outlined" style="background-color:rgba(235, 182, 114, 0.633);">
+            factory
+        </span>
+        PROPERTIES
+    </a>
+    <a href="{%url 'cooky:property_view'%}" style="color: rgb(255, 62, 127);">
+        <span class="material-symbols-outlined" style="background-color: rgba(242, 109, 154, 0.532);">
+            hotel
+        </span>
+        HOTEL
+    </a>
+    <a href="{%url 'cooky:property_view'%}">
+        <span class="material-symbols-outlined" style="background-color: rgba(65, 43, 139, 0.419);">
+            hotel
+        </span>
+        VILLA
+    </a>
+</div>
 
 {% endblock %}
