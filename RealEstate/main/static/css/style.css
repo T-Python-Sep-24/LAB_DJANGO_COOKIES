@@ -1,0 +1,190 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body.dark-mode {
+    background-image: url('/static/images/skyscraper-dark.jpg');
+    background-color: #333; 
+    color: #ffffff; 
+}
+
+.dark-mode nav {
+    background-color: #444; 
+}
+
+.dark-mode a {
+    color: #ffffff; 
+}
+
+
+a:hover{
+    color: red;
+}
+
+.phudu-ph1 {
+  font-family: "Phudu", serif;
+  font-optical-sizing: auto;
+  font-weight: 300px;
+  font-style: normal;
+}
+
+.display-mode {
+    display: flex; 
+    align-items: center; 
+    gap: 1px; 
+}
+
+.light_mode, .bedtime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px; 
+    height: 25px; 
+    border-radius: 50%; 
+}
+
+.light_mode.active {
+    background-color: #ffffff; 
+}
+
+.bedtime.active {
+    background-color: black; 
+    color: #ffffff; 
+}
+
+
+body{
+    background-image: url('/static/images/skyscraper.jpeg');
+    background-color: silver;
+    height: 600px;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-origin: padding-box;
+ 
+}
+
+
+.wrapper{
+    display: flex;
+    padding: 3rem 4rem 0rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    
+
+  
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    background-color: rgb(255, 255, 255);
+    padding: 1.5rem 4rem;
+    border-radius: 40px;
+
+}
+.nav_right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
+    margin-bottom: 1rem;
+    width: 560px;
+    gap: 1rem;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 200px;
+    padding: 10px;
+    border: 0rem;
+
+
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+   justify-content: center;
+   justify-content: space-around;
+   margin-left: 350px;
+   background-color: #ffffff;
+   padding: 1rem 4rem;
+   border-radius: 40px;
+
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    
+}
+
+.al{
+    padding: 5px;
+    background-color: rgba(15, 218, 59, 0.411);
+    color: #096310;
+    border-radius: 50%;
+
+}
+
+.pr{
+    padding: 5px;
+    background-color: rgba(212, 137, 24, 0.411);
+    color: #e28317;
+    border-radius: 50%;
+
+}
+.ht{
+    padding: 5px;
+    background-color: rgba(212, 24, 165, 0.411);
+    color: #9e0c72;
+    border-radius: 50%;
+
+}
+.v{
+    padding: 5px;
+    background-color: rgba(24, 27, 212, 0.411);
+    color: #0b1997;
+    border-radius: 50%;
+
+}
+
+
+/* -------------------------------Contact------------------------------*/
+
+
+
+
+
+

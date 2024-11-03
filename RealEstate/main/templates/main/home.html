@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+HOME
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <h1> FIND YOUR DREAMS</h1>
+
+    <p>Our catalog will surpise you. Rather,discover an unprecendendented offers of luxury properties. 
+        <br>Our catalog will surprise you. Rather,discover an unprecendendented offers of luxury properties.
+    </p>
+
+    <a href="{% url 'main:properties_page' %}" class="btn">Expolore Properties</a>
+
+</section>
+
+<footer>
+    <a href="">
+        <div class="icons">
+            <span class="material-symbols-outlined al">house</span>
+            <h6 style="color: #096310;">ALL</h6>
+        </div>
+    </a>
+    <a href="{% url 'main:properties_page' %}">
+        <div class="icons">
+            <span class="material-symbols-outlined pr">factory</span>
+            <h6 style="color: #e28317;">PROPERTIES</h6>
+        </div>
+    </a>
+    <a href="">
+        <div class="icons">
+            <span class="material-symbols-outlined ht">hotel</span>
+            <h6 style="color: #9e0c72;">HOTEL</h6>
+        </div>
+    </a>
+    <a href="">
+        <div class="icons">
+            <span class="material-symbols-outlined v">villa</span>
+            <h6 style="color: #0b1997;">VILLA</h6>
+        </div>
+        
+    </a>
+</footer>
+
+{% endblock %}
