@@ -1,0 +1,42 @@
+{%  extends 'main/control.html'%}
+{% block content %}
+{%load static%}
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@500&display=swap" rel="stylesheet">        
+    <section class="style-home">
+        <div>
+            <h1 class="style-font-h1-f">FIND YOUR<br>DREAMS</h1>
+        </div>
+                  
+        <div class="me-text-phrease">
+            Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our<br> 
+            catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+        </div>
+            <a href="{% url 'main:properties_view' %}" class="btn-text-Explore-Properties">Explore Properties</a>
+    </section>
+
+    <footer class="edit-footer">
+        <nav  class="edit-navbar-footer">
+           
+            <div class="edit-icon-home">
+                <span class="material-symbols-outlined">home</span>
+                <a href="#" class="text-icon-home">ALL</a>
+            </div>
+            
+            <div   class="edit-icon-factory">
+                <span class="material-symbols-outlined">factory</span>
+                <a href="#"class="text-icon-factory">Properties</a>
+            </div>
+            
+            <div  class="edit-icon-hotel">
+                <span class="material-symbols-outlined">hotel</span>
+                <a href="#" class="text-icon-hotel">HOTEL</a>
+            </div>
+        
+            <div class="edit-icon-villa">
+                <span class="material-symbols-outlined">villa</span>
+                <a href="#" class="text-icon-villa">VILLA</a>
+            </div>
+        </nav>
+    </footer>
+
+{% endblock %}
