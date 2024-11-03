@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Properties{% endblock %}
+
+{% block bodyclass %} lightbody {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darkbody {% endif %} {% endblock %}
+
+{% block content %}
+<section>
+    <div class="container-lg">
+        <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+            {% for property in properties %}
+            <div class="col">
+                <div class="card rounded-5 shadow {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} text-bg-dark {% else %} text-bg-light {% endif %}">
+                    <img src="/static/images/{{ property.image }}" style="height: 250px;" alt="{{ property.title }}" class="card-img-top img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title p-3">{{ property.title }}</h5>
+                        <div class="d-flex flex-row-reverse px-3">
+                            <a href="#" class="btn shadow rounded-pill bg-black text-white">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Phudu:wght@300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.f-phudu {
+    font-family: 'Phudu', sans-serif;
+}
+
+.f-ubuntu {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Base styling */
+.lightlinks {
+    text-decoration: none;
+    color: #0077b6; /* Technology blue */
+}
+
+.darklinks {
+    text-decoration: none;
+    color: #9b59b6; /* Tech purple */
+}
+
+.activeicondark {
+    background-color: rgba(44, 62, 80, 0.8); /* Dark navy */
+    color: #95a5a6; /* Light gray */
+}
+
+.activeiconlight {
+    background-color: rgba(236, 240, 241, 0.7); /* Light gray */
+    color: #2980b9; /* Blue */
+}
+
+.linkHover:hover {
+    color: #00bcd4; /* Teal */
+    font-size: 1.1em;
+    transition: all 0.3s;
+}
+
+.modeicon:hover {
+    color: #00bcd4; /* Teal */
+    font-size: 1.8em;
+    transition: all 0.3s;
+}
+
+.container .logohover {
+    font-size: 2.5em;
+}
+
+.container .logolight {
+    color: #2980b9; /* Blue */
+}
+
+.container .logodark {
+    color: #f1c40f; /* Yellow */
+}
+
+.container .logohover:hover {
+    color: #00bcd4; /* Teal */
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+/* Home page styling */
+.homelightbody {
+    background: url('../images/skyscraper.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.homedarkbody {
+    background: url('../images/skyscraper-dark.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.allicon {
+    color: #27ae60; /* Green */
+    background-color: rgba(39, 174, 96, 0.3); /* Light green */
+}
+
+.propertiesicon {
+    color: #e67e22; /* Orange */
+    background-color: rgba(230, 126, 34, 0.3); /* Light orange */
+}
+
+.hotelicon {
+    color: #8e44ad; /* Purple */
+    background-color: rgba(142, 68, 173, 0.3); /* Light purple */
+}
+
+.villaicon {
+    color: #7f8c8d; /* Gray */
+    background-color: rgba(127, 140, 141, 0.3); /* Light gray */
+}
+
+.hometitlelight {
+    font-size: 5em;
+    font-weight: 600;
+    line-height: 1em;
+    color: rgba(44, 62, 80, 0.742); /* Dark navy */
+    animation: titlemove 1s ease-in;
+}
+
+.hometitledark {
+    font-size: 5em;
+    font-weight: 600;
+    line-height: 1em;
+    color: rgba(236, 240, 241, 0.849); /* Light gray */
+    animation: titlemove 1s ease-in;
+}
+
+.homedescriptionlight {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.3em;
+    color: rgba(41, 128, 185, 0.868); /* Blue */
+}
+
+.homedescriptiondark {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.3em;
+    color: rgba(236, 240, 241, 0.934); /* Light gray */
+}
+
+/* Animation */
+@keyframes titlemove {
+    0% {
+        opacity: 0;
+        transform: translate(20%, -25%) scale(0.2);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* Properties page styling */
+.lightbody {
+    background-color: #f4f4f4; /* Light gray */
+}
+
+.darkbody {
+    background-color: #34495e; /* Dark navy */
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+/* Contact page styling */
+.contactlightbody {
+    background: url('../images/contactlight.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contactdarkbody {
+    background: url('../images/contactdark.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container .textlight {
+    color: #2c3e50; /* Dark navy */
+}
+
+.container .textdark {
+    color: #ecf0f1; /* Light gray */
+}
