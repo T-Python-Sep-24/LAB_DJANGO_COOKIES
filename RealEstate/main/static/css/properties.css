@@ -1,10 +1,12 @@
 
-
 body{
     background-image:none !important;
     background-color: #ebeae9!important;
  }
  
+ .main_background{
+    z-index: 2 !important;
+ }
  
 .card-content{
  display: flex;
@@ -13,25 +15,31 @@ body{
  margin-left: 10.5%;
 }
 
-.card-content p{
-   font-size: small;
+div.card-content p{
+   font-size: larger !important;
 }
 
 .cards-area{
     display: flex;  
     flex-wrap: wrap;
     column-gap: 2rem;
+    row-gap: 1rem;
+    margin-bottom: 12vh;
 }
 .card{
     width: 18rem;
     height: 13rem;
+    background-color:#e2e1e1 ;
     margin-bottom: 1rem;
+    margin-top:1rem;
 }
 .card-title{
     font-size: 1rem;
 }
 .card-img-top{
     height: 80%;
+    border-radius:10px 10px 0px 0px;
+    margin-bottom: 0px;
 }
 .card-body{
     display: flex;
@@ -39,6 +47,7 @@ body{
     align-items: start;
     background-color:#e2e1e1 ;
     border-radius:0px 0px 10px 10px;
+    padding: 1rem 1rem;
 }
 .card-body a{
     align-self: end !important;

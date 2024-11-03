@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    {%block style%}{%endblock%}
+    {%block style%} {%endblock%}
+    
     {%block title%}<title>Home</title>{%endblock%}
 </head>
 <body> <!--background-->
@@ -20,7 +21,7 @@
     <main class="main_content">
         <!--nav-->
         <nav>
-            <h1 class="phudu-phudu-font">HOME</h1>
+            <h1 class="phudu-phudu-font" id="brand">HOME</h1>
             <div class="navbar">
                 <a href="{%url 'main:home_view'%}">Home</a>
                 <a href="{%url 'main:properties_view'%}">Properites</a>
