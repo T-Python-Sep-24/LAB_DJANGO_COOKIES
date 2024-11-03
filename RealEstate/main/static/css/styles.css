@@ -210,7 +210,7 @@ body.dark .material-symbols-outlined {
 }
 
 .background-img {
-  background-image: url("/static/images/skyscraper.jpg");
+  background-image: url("/static/images/skyscraper.jpeg");
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -388,6 +388,11 @@ body.dark .property {
 
 .contact-section h2 {
   font-size: 30px;
+  color: black;
+}
+
+body.dark .contact-section h2 {
+  color: white;
 }
 
 .mid-contact {
