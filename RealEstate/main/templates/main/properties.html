@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/properties.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="properties-container">
+    <h2>Our Properties</h2>
+    <div class="cards-container">
+        {% for property in properties %}
+        <div class="card">
+            <div class="card-image"><img src="../../static/images/{{ property.image }}" alt="{{ property.image }} image"></div>
+            <div class="card-title">{{ property.title }}</div>
+            <button class="btn card-btn">more</button>
+        </div>
+        {% endfor %}
+    </div> <!-- end of card container -->
+</div> <!-- end of properties-container -->
+{% endblock %}

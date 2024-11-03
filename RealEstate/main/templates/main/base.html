@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" {% if 'mode' in request.COOKIES %} class="dark"{% endif %}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block style %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body {% block body %}{% endblock %}>
+    <div class="wrapper">
+        <div class="header-container">
+            <header>
+                <nav>
+                    <a href="{% url 'main:home_view' %}" class="menu-home">HOME</a>
+                    <ul class="menu-links {% if 'mode' in request.COOKIES %} dark-menu {% endif %}">
+                        <a href="{% url 'main:home_view' %}"><li>Home</li></a>
+                        <a href="{% url 'main:properties_view' %}"><li>Properties</li></a>
+                        <a href="#"><li>Services</li></a>
+                        <a href="#"><li>About</li></a>
+                        <a href="{% url 'main:contact_view' %}"><li>Contact</li></a>
+                    </ul>
+                    <div class="menu-right">
+                        <a href="#"><div class="menu-icon"><span class="material-symbols-outlined">person</span><span> Sign up</span></div></a>
+                        <a href="{% url 'main:light_mode_view' %}"><div class="menu-icon {% if 'mode' not in request.COOKIES %} active-light {% endif %}"><span class="material-symbols-outlined">light_mode</span></div></a>
+                        <a href="{% url 'main:dark_mode_view' %}"><div class="menu-icon {% if 'mode' in request.COOKIES %} active-dark {% endif %}"><span class="material-symbols-outlined">dark_mode</span></div></a>
+                    </div>
+                </nav>
+            </header>
+        </div> <!-- end of header container -->
+        <div class="main-container">
+            <main>
+                {% block content %}
+        
+                {% endblock %}
+            </main>
+        </div> <!-- end of main container-->
+        <footer>© Real Estate, all right reserved</footer>
+    </div> <!-- End of wrapper-->
+</body>
+</html>

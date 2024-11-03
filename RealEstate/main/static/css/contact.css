@@ -1,0 +1,45 @@
+body {
+    background-image: url('../images/email.jpg');
+    background-size: cover; /* Ensures image covers the entire viewport */
+    background-position: center; 
+    background-attachment: fixed; /* Keeps the image in place during scroll */
+}
+
+
+
+.contac-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-right: 2rem;
+}
+
+.contact-details a {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+/*** media query for small screen ***/
+@media (max-width: 700px) {
+    .contac-container {
+        flex-direction: column;
+    }
+
+    .contact-details {
+        flex-direction: row;
+        column-gap: 1rem;
+        justify-content: center;
+        padding-bottom: 1rem;
+    }
+
+    .contact-location {
+        max-width: 300px;
+    }
+}

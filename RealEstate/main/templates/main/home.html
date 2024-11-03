@@ -1,1 +1,30 @@
-test
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block body %}{% if 'mode' in request.COOKIES %} class="body-dark" {% endif %}{% endblock %}
+<!-- <body {% if 'mode' in request.COOKIES %} class="body-dark" {% endif %}></body> -->
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/home.css'%}">
+{% endblock %}
+
+{% block title %}Real Estate{% endblock %}
+
+{% block content %}
+
+<div class="cta-container">
+    <h1>Find Your Dreams</h1>
+    <p>Our catalog will suprise you. Rather, discover an unprecedented offers of luxury properties. our catalog will suprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+    <form action="{% url 'main:properties_view' %}" method="get"><button class="btn">Explore Properties</button></form>
+</div> <!-- end of container -->
+<div class="filter-container">
+    <ul class="filter-links {% if 'mode' in request.COOKIES %} dark-filter {% endif %}">
+        <li><a class="filter-icons" href="#"><span class="material-symbols-outlined">house</span><p>Home</p></a></li>
+        <li><a class="filter-icons" href="{% url 'main:properties_view' %}"><span class="material-symbols-outlined">real_estate_agent</span><p>Properties</p></a></li>
+        <li><a class="filter-icons" href="#"><span class="material-symbols-outlined">hotel</span><p>Hotel</p></a></li>
+        <li><a class="filter-icons" href="#"><span class="material-symbols-outlined">villa</span><p>Villa</p></a></li>
+    </ul>
+</div> <!-- end of container -->
+
+
+{% endblock %}

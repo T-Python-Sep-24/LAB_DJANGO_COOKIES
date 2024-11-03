@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Contact Us</h2>
+<div class="contac-container">
+    <div class="contact-details">
+        <p>Telephone: <a href="tel:+9665511111">+966-551-1111</a></p>
+        <p>Email: <a href="email:info@realestate.com">info@realestate.com</a></p>
+        <p>Addres:</p>
+        <p>Anas bin Malik, Riyadh<br />Building wbr112s<br />Saudi Arabia</p>
+    </div>
+    <div class="contact-location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.0689006336293!2d46.7302042249082!3d24.827317246583515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efc6d472d42af%3A0x24b3a53de9cbc5c3!2z2KjYp9ix2YMg2KfZgdmG2YrZiA!5e0!3m2!1sar!2ssa!4v1730596748170!5m2!1sar!2ssa" width="600px" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+{% endblock %}

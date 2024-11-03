@@ -1,0 +1,54 @@
+body {
+    background-image:radial-gradient(#aaa, #eee);
+}
+
+.properties-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.card {
+    background-color: #aaa;
+    /* make the card take third of the width */
+    width: calc((100% - 60px) / 3);
+    border-radius: 15px;
+    position: relative;
+    /* increase padding since button is absolute */
+    padding-bottom: 1.5rem;
+}
+
+.card-image img {
+    max-width: 100%;
+    border-radius: 15px 15px 0 0;
+    background-color: yellow;
+}
+
+/* fix second image aspect ratio, make it like the rest */
+.card:nth-child(2) img {
+    aspect-ratio: 1.506; /* Enforces the 1.506 aspect ratio */
+}
+
+.card-title {
+    padding: 1rem 1rem;
+}
+
+.card-btn {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+/*** media query for small screen ***/
+@media (max-width: 700px) {
+    .card {
+        width: 100%;
+    }
+}
