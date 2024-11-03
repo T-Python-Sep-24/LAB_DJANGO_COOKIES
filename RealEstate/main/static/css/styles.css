@@ -1,3 +1,4 @@
+/* base.html*/
 body{
     margin: 0;
     padding: 40px 40px; 
@@ -9,46 +10,11 @@ body{
     display: flex;
     flex-direction: column;
 }
-#home-page{
-    background-image: url('/static/images/skyscraper.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
-
-}
-#home-page.dark-mode{
-    background-image: url('/static/images/skyscraper-dark.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
-}
-#properties-page{
-    background-color: #FAF7F0;
-}
-#properties-page.dark-mode{
-    background-color:#001f3f95 ;
-}
-#contact-page{
-    background-image:url('/static/images/email.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
-}
 
 header{
     padding: 25px;
     margin: 0;
-
 }
-main { 
-    margin: 0;
-    flex: 1; 
-    display: flex;
-    flex-direction: column; 
-    padding: 20px; 
-    margin-top: 100px; 
-}
-
 
 body.dark-mode .navbar {
     background-color: rgba(0, 0, 0, 0.8);
@@ -211,9 +177,13 @@ body.dark-mode .mode-switch a {
 .mode-switch a:hover {
     color: red; 
 }
-
-.toggle-label {
-    cursor: pointer;
+main { 
+    margin: 0;
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    padding: 20px; 
+    margin-top: 100px; 
 }
 
 footer {
@@ -234,6 +204,29 @@ footer p {
     font-size: 14px; 
 }
 
+/* home page*/
+#home-page{
+    background-image: url('/static/images/skyscraper.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+
+}
+#home-page.dark-mode{
+    background-image: url('/static/images/skyscraper-dark.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    padding: 20px;
+}
+
 @keyframes slideIn {
     0% {
         transform: translate(50px) scale(0.5); 
@@ -243,13 +236,6 @@ footer p {
         transform: translateY(0) scale(1); 
         opacity: 1;
     }
-}
-.content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 600px;
-    padding: 20px;
 }
 
 .Welcome {
@@ -278,7 +264,6 @@ body.dark-mode .Welcome {
     opacity: 1; 
     transform: translateY(0); 
 }
-
 .paragraph {
     font-size: 20px; 
     text-align: left; 
@@ -355,30 +340,21 @@ body.dark-mode .homenav {
     color: inherit; 
     font-size: 20px; 
 }
-.icon-container:hover {
-    opacity: 0.8; 
-}
-.our-properties-title {
-    text-align: left; 
-    margin-bottom: 20px; 
-    font-size: 2em; 
-    color: #333; 
-}
 
+/*properties page*/
+
+#properties-page{
+    background-color: #FAF7F0;
+}
+#properties-page.dark-mode{
+    background-color:#001f3f95 ;
+}
 .properties-container {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: flex-start; 
     margin: 20px 0; 
 }
-.icon-label {
-    color: black; 
-    margin-top: 8px; 
-}
-.icon-label.dark-mode{
-    color: white;
-}
-
 .property-card {
     background-color: rgba(150, 150, 150, 0.325); 
     border: 1px solid rgba(150, 150, 150, 0.325); 
@@ -399,12 +375,6 @@ body.dark-mode .homenav {
     object-fit: cover; 
     border-radius: 8px 8px 0 0; 
 }
-
-.property-card h2 {
-    text-align: left; 
-    margin: 10px 0; 
-}
-
 .more-button {
     background-color: #000001; 
     color: white; 
@@ -416,9 +386,16 @@ body.dark-mode .homenav {
     transition: background-color 0.3s; 
     
 }
-
 .more-button:hover {
     background-color: #242425; 
+}
+
+/* contact page */
+#contact-page{
+    background-image:url('/static/images/email.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
 }
 .contact-section {
     display: flex;
@@ -426,28 +403,26 @@ body.dark-mode .homenav {
     align-items: center;
     margin: 0 40px;
     max-width: 5000px; 
-}
+    font-size: 24px; 
 
+}
 .contact-title {
     width: 100%;
     text-align: left; 
     font-size: 24px; 
     margin-bottom: 20px; 
 }
-
 .contact-flex {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
     width: 100%; 
 }
-
 .contact-info {
     width: 50%; 
     padding: 20px; 
     margin-bottom: 50px;
 }
-
 .map-container {
     width: 100%; 
     height: 400px; 
@@ -455,7 +430,6 @@ body.dark-mode .homenav {
     overflow: hidden; 
     margin-bottom: 50px; 
 }
-
 .map-container iframe {
     width: 100%; 
     border: 0;
@@ -465,7 +439,3 @@ body.dark-mode .homenav {
     color: blue; 
     text-decoration: underline; 
 }
-
-
-
-
