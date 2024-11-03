@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" {% if 'mode' in request.COOKIES %} class="dark-mode" {% endif%}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
+
+    <title>{% block title %}RealEstate{% endblock %}</title>
+</head>
+<body id="{% block body_id %}default-id{% endblock %}" class="{% block body_class %}{% endblock %}">
+    <header>
+    <div class="header-container">
+        <div class="logo">
+            <h1>Home</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'home_view' %}">Home</a></li>
+                <li><a href="{% url 'properties_view' %}">Properties</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="{% url 'contact_view' %}">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="user-controls">
+            <div class="user">
+                <span class="material-symbols-outlined">person</span>
+                <span class="sign-in-text">Sign In</span>
+            </div>
+            <div class="mode-switch {% if mode == 'dark' %}dark{% else %}active{% endif %}">
+                <a href="{% url 'set_mode' %}?mode=light" title="Light Mode">
+                    <span class="material-symbols-outlined mode-icon">light_mode</span>
+                </a>
+                <a href="{% url 'set_mode' %}?mode=dark" title="Dark Mode">
+                    <span class="material-symbols-outlined mode-icon">dark_mode</span>
+                </a>
+                <div class="indicator {% if mode == 'dark' %}dark-indicator{% else %}light-indicator{% endif %}"></div>
+            </div>
+        </div>
+    </div>
+   </header>
+   <main>
+       {% block content %}{% endblock %}
+   </main>
+<footer>
+    <div class="footer-container">
+        <p> Real Estate Internationl. All Rights Reserved 2024.</p>
+    </div>
+</footer>
+</body>
+</html>

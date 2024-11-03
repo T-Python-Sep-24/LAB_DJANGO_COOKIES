@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+{% load static %} 
+{% block body_id %}properties-page{% endblock %} 
+{% block body_class %}
+    {% if mode == 'dark' %}
+        dark-mode
+    {% endif %}
+{% endblock %}
+{% block title %}Properties{% endblock %}
+
+{% block content %}
+<section class="properties-section {% if mode == 'dark' %}dark-mode{% endif %}">
+    <h1 class="our-properties-title">Our Properties</h1> 
+    <div class="properties-container">
+        {% for property in properties %}
+            <div class="property-card">
+                <img src="{% static 'images/' %}{{ property.image }}" alt="{{ property.title }}">
+                <h2 style="font-size: medium;">{{ property.title }}</h2>
+                <a href="#" class="more-button">More</a>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

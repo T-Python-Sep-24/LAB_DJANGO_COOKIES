@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block body_id %}home-page{% endblock %} 
+{% block body_class %}
+    {% if mode == 'dark' %}
+        dark-mode
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="content-container">
+    <h1 class="Welcome">Find Your Dreams</h1>
+    <p class="paragraph">Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+    <a href="{% url 'properties_view' %}" class="my-button">Explore Properties</a>
+
+</div>
+<div class="homenav">
+    <div class="icon-container">
+        <div class="icon">
+            <span class="material-symbols-outlined">house</span>
+        </div>
+        <div class="icon-label">All</div>
+    </div>
+    <div class="icon-container blue">
+        <div class="icon">
+            <span class="material-symbols-outlined">real_estate_agent</span>
+        </div>
+        <div class="icon-label">Properties</div>
+    </div>
+    <div class="icon-container purple">
+        <div class="icon">
+            <span class="material-symbols-outlined">hotel</span>
+        </div>
+        <div class="icon-label">Hotel</div>
+    </div>
+    <div class="icon-container pink">
+        <div class="icon">
+            <span class="material-symbols-outlined">villa</span>
+        </div>
+        <div class="icon-label">Villa</div>
+    </div>
+</div>
+
+{% endblock %}
