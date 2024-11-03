@@ -1,0 +1,380 @@
+*{
+
+margin: 0;
+font-family: "Phudu", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+  font-size: small;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 3rem;
+    position: absolute;
+    top: 0;
+}
+.section_one{
+    position: absolute;
+    bottom: 40%;
+}
+.item_one{
+    padding-left: 5rem;
+}
+.item_one h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+.item_two {
+    display: flex;
+    background-color: white; 
+    border: 1px;
+    border-radius: 50px;
+    padding: 2rem 4rem 2rem 4rem;
+    align-items: center;
+    color: black ;
+    width: 30%;
+    justify-content: space-around;
+}
+
+.item1{
+    padding-left: 10px;
+}
+.item-three{
+    padding-right: 5rem;
+    display: flex;
+    width: 11%;
+    align-items: center;
+}
+
+.material-symbols-outlined{ 
+    padding: 0.4rem;
+}
+.material-hover:hover{
+    background-color: rgb(252, 252, 251);
+    cursor: pointer;
+    border: 1px;
+    border-radius: 50px;
+}
+
+.style_image{
+    width: 100% ;
+    height: 100% ;
+    position: relative;
+
+}
+
+.title1{
+    font-size: 90px;
+    font-weight: 500;
+    width: 40%;
+    padding-left: 5rem;
+    
+}
+
+.paragraph{
+    width: 50%;
+    padding-left: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+
+.btn1{
+    background-color: black;
+    color: white;
+    padding: 1rem 3rem 1rem 3rem ;
+    border: 1px;
+    border-radius: 50px;
+    margin-left: 5rem;
+}
+
+.contaner_menu {
+    position: absolute;
+    border: 1px;
+    border-radius: 50px;
+    left: 33%;
+    z-index: 10;
+    background-color: white;
+    top: 80%;
+}
+.menu{
+    display: flex;
+}
+.menu_item1{
+display: flex;
+flex-direction: column-reverse;
+align-items: center;
+padding: 1rem 3rem 1rem 3rem ;
+}
+
+.house{
+    background-color: palegreen;
+    border: 1px;
+    border-radius: 50px;
+    color: rgb(105, 137, 105);
+}
+
+.house_word{
+    color: rgb(105, 137, 105);
+}
+
+.properties{
+    background-color: rgb(228, 197, 140);
+    border: 1px;
+    border-radius: 50px;
+    color: rgb(117, 88, 37);
+
+}
+
+.properties_word{
+    color: rgb(117, 88, 37);
+}
+
+.hotel{
+    background-color: rgb(234, 144, 235);
+    border: 1px;
+    border-radius: 50px;
+    color: rgb(133, 38, 106);
+}
+
+.hotel_word {
+    color: rgb(133, 38, 106);
+}
+
+.villa{
+    background-color: rgb(147, 138, 229);
+    border: 1px;
+    border-radius: 50px;
+    color: rgb(49, 24, 141);
+}
+
+.villa_word{
+    color: rgb(49, 24, 141);
+}
+
+.bg_color_properties{
+    background-color: rgb(215, 209, 209);
+}
+
+.title2{
+    font-size: 90px;
+    font-weight: 500;
+    width: 40%;
+    padding-left: 5rem;
+    
+    
+}
+
+/* .Sub_title2 h1{
+   
+    padding-left: 5rem;
+    position: relative;
+    padding-bottom:  5rem;
+
+    
+} */
+.grid-container {
+    
+    display: flex; /* Use flexbox to arrange items in a row */
+    gap: 15px; /* Space between items */
+    margin: 17rem 6rem  ;
+    
+    
+    
+}
+
+.grid-item1 {
+    
+    background-color: rgb(189, 189, 189); /* Gray background for title */
+    flex: 0 0 200px; /* Fixed width for each item */
+    border-radius: 8px; /* Rounded corners for the image */
+    height: 10% ;
+    margin:2rem;
+
+}
+
+.grid-image1 {
+    width: 100%; /* Make image responsive */
+    border-radius: 8px; /* Rounded corners for the image */
+  
+   
+}
+
+.grid-title1 {
+    
+    color: black; /* Text color */
+    font-size: 18px; /* Slightly smaller font size */
+    margin: 5px; ;
+    
+}
+
+.grid-button1 {
+    background-color: black; /* Black background for button */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    padding: 7px 15px ; /* Padding for button */
+    border-radius: 50px; /* Rounded corners */
+    margin-left: 130px ;
+    margin-bottom: 1rem;
+
+}
+
+
+
+.grid-item2 {
+    
+    background-color: rgb(189, 189, 189); /* Gray background for title */
+    flex: 0 0 200px; /* Fixed width for each item */
+    border-radius: 8px; /* Rounded corners for the image */
+    height: 10% ;
+    margin:2rem;
+
+}
+
+.grid-image2 {
+    width: 100%; /* Make image responsive */
+    border-radius: 8px; /* Rounded corners for the image */
+  
+   
+}
+
+.grid-title2 {
+    
+    color: black; /* Text color */
+    font-size: 18px; /* Slightly smaller font size */
+    margin: 5px; ;
+    
+}
+
+.grid-button2 {
+    background-color: black; /* Black background for button */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    padding: 7px 15px ; /* Padding for button */
+    border-radius: 50px; /* Rounded corners */
+    margin-left: 130px ;
+    margin-bottom: 1rem;
+
+}
+
+
+.grid-item3 {
+    
+    background-color: rgb(189, 189, 189); /* Gray background for title */
+    flex: 0 0 200px; /* Fixed width for each item */
+    border-radius: 8px; /* Rounded corners for the image */
+    height: 10% ;
+    margin:2rem;
+
+}
+
+.grid-image3 {
+    width: 100%; /* Make image responsive */
+    border-radius: 8px; /* Rounded corners for the image */
+  
+   
+}
+
+.grid-title3 {
+    
+    color: black; /* Text color */
+    font-size: 18px; /* Slightly smaller font size */
+    margin: 5px; ;
+    
+}
+
+.grid-button3 {
+    background-color: black; /* Black background for button */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    padding: 7px 15px ; /* Padding for button */
+    border-radius: 50px; /* Rounded corners */
+    margin-left: 130px ;
+    margin-bottom: 1rem;
+
+}
+
+
+
+.grid-item4 {
+    
+    background-color: rgb(189, 189, 189); /* Gray background for title */
+    flex: 0 0 200px; /* Fixed width for each item */
+    border-radius: 8px; /* Rounded corners for the image */
+    height: 10% ;
+    margin:2rem;
+
+}
+
+.grid-image4 {
+    width: 100%; /* Make image responsive */
+    border-radius: 8px; /* Rounded corners for the image */
+  
+   
+}
+
+.grid-title4 {
+    
+    color: black; /* Text color */
+    font-size: 18px; /* Slightly smaller font size */
+    margin: 5px; ;
+    
+}
+
+.grid-button4 {
+    background-color: black; /* Black background for button */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    padding: 7px 15px ; /* Padding for button */
+    border-radius: 50px; /* Rounded corners */
+    margin-left: 130px ;
+    margin-bottom: 1rem;
+
+}
+
+.section_contact {
+    position: absolute;
+    bottom: 40%;
+    display: flex; /* Use flexbox to arrange contact info and map */
+    align-items: flex-start; /* Align items at the start */
+    gap: 20px; /* Space between contact info and map */
+    padding: 20px; /* Padding around the section */
+
+}
+
+.contact_title {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.contact-info {
+    flex: 1; /* Allow this section to grow */
+    padding-right: 20px; /* Space between text and map */
+    padding: 9rem  3rem ;
+
+}
+
+.hero_map {
+    flex: 0 0 400px; /* Fixed width for the map */
+    height: 300px; /* Fixed height for the map */
+}
+
+.hero_map iframe {
+    width: 70rem ; /* Full width for the iframe */
+    height: 30rem ; /* Full height for the iframe */
+    border-radius: 8px; /* Rounded corners for the map */
+    
+}
+
+.email{
+    font-weight: 30px;
+    color: blue;
+}
+
+.phone{
+    font-weight: 30px;
+    color: blue;
+}

@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Agency</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg_color_properties">
+    <nav  >
+        <div class="item_one">
+        <h1 >HOME</h1>
+        </div>
+        
+       <div class="item_two">
+           <h5 class="item1">Home</h5>
+           <h5 class="item1">Properties</h5>
+           <h5 class="item1">Services</h5>
+           <h5 class="item1">About</h5>
+           <h5 class="item1">Contact</h5>
+       </div>
+       
+        <div class="item-three">
+           <span class="material-symbols-outlined">
+               person
+           </span>
+           <h5>Sign Up</h5>
+           <span class="material-symbols-outlined material-hover">
+               light_mode
+           </span>
+           <span class="material-symbols-outlined material-hover">
+               dark_mode
+               </span>
+        </div>
+          </nav>
+    
+          <div class="grid-container">
+            <div class="grid-item1">
+                <img src="{% static 'images/villa1.jpg' %}" class="grid-image1" alt="Villa 1"/>
+                <div class="grid-title1">VILLA MODERN IN MALQA</div>
+                <button class="grid-button1">more</button>
+            </div>
+            <div class="grid-item2">
+                <img src="{% static 'images/villa2.jpg' %}" class="grid-image2" alt="Villa 2"/>
+                <div class="grid-title2">GREAT HOME FOR YOU IN RIMAL</div>
+                <button class="grid-button2">more</button>
+            </div>
+            <div class="grid-item3">
+                <img src="{% static 'images/villa3.jpg' %}" class="grid-image3" alt="Villa 3"/>
+                <div class="grid-title3">VILLA WITH 8 BEDROOMS IN SWEDEY</div>
+                <button class="grid-button3">more</button>
+            </div>
+            <div class="grid-item4">
+                <img src="{% static 'images/villa4.jpg' %}" class="grid-image4" alt="Villa 4"/>
+                <div class="grid-title4">AMAZING VILLA IN HITTEN</div>
+                <button class="grid-button4">more</button>
+            </div>
+        </div>
+</body>
+</html>
