@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="property-list">
+    {% for property in properties %}
+    <div class="property-item">
+        <img src="{% static 'images/'|add:property.image %}" alt="{{ property.title }}">
+        <h2>{{ property.title }}</h2>
+    </div>
+    {% empty %}
+    <p>No properties available.</p>
+    {% endfor %}
+</div>
+{% endblock %}

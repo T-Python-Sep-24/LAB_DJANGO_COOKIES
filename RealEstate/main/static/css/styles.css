@@ -1,0 +1,121 @@
+body {
+    font-family: 'Phudu', sans-serif; /* Use the chosen Google font */
+    margin: 0;
+    padding: 0;
+    color: black; /* Default text color */
+    background-image: url('{% static "images/skyscraper.jpeg" %}'); /* Default background */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    height: 100vh; /* Ensure the body takes full height */
+}
+
+header {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between title and buttons */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Add padding for the header */
+    z-index: 10; /* Ensure header is above background */
+}
+
+.header-buttons {
+    display: flex; /* Flexbox for buttons alignment */
+    gap: 10px; /* Space between buttons */
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque background for the nav */
+    padding: 10px 0; /* Padding for the nav */
+}
+
+nav ul {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the nav items */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between nav items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Link color */
+    font-weight: bold; /* Bold text */
+    padding: 10px 15px; /* Add padding around the links */
+    display: block; /* Make the entire area clickable */
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+.property-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center the items */
+    padding: 20px; /* Add padding around the list */
+}
+
+.property-item {
+    background-color: #f8f8f8; /* Light background for each item */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    margin: 10px; /* Space between items */
+    width: 200px; /* Fixed width */
+    text-align: center; /* Center the text */
+    overflow: hidden; /* Hide overflow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+}
+
+.property-item img {
+    width: 100%; /* Make image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    border-top-left-radius: 8px; /* Rounded top corners */
+    border-top-right-radius: 8px; /* Rounded top corners */
+}
+
+.property-item h2 {
+    font-size: 1.1em; /* Slightly smaller font size */
+    margin: 10px 0; /* Margin around title */
+    color: black; /* Title color */
+}
+
+.property-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+}
+
+.light-mode {
+    /* Background image is set in body */
+}
+
+.dark-mode {
+    background-image: url('{% static "images/skyscraper-dark.jpg" %}'); /* Background for dark mode */
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black for dark mode */
+    color: white; /* Change text color for dark mode */
+}
+
+.content {
+    padding: 20px; /* Add padding for content */
+    max-width: 800px; /* Set a max width for better readability */
+    margin: 20px auto; /* Center the content with top margin */
+}
+.content h2 {
+    font-size: 2em; /* Ensures uniform heading size */
+    margin-bottom: 20px; /* Space below heading */
+    color: black; /* Consistent color */
+}
+
+.content p {
+    font-size: 1em; /* Uniform paragraph size */
+    line-height: 1.6; /* Improves readability */
+    margin-bottom: 20px; /* Space below paragraphs */
+}
+
+.content ul {
+    list-style-type: disc; /* Consistent list style */
+    padding-left: 20px; /* Indentation for list items */
+}
