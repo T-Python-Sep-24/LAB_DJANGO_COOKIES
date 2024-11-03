@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@500&display=swap" rel="stylesheet"> -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&"/>
+        <link rel="stylesheet" href="{% static 'css/styledark.css' %}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RealEstate</title>
+    </head>
+        <body class="{% if request.COOKIES.mode == 'dark' %}dark-mode{% endif %}">
+            <div class="main-style-page-dark">
+                <section class="top-style-dark">
+                    <h1 class="style-text-home-dark">HOME</h1>
+                        <nav class="edit-nav-bar-dark">
+                            <a href="#" >Home</a>
+                            <a href="#" >Properties</a>
+                            <a href="#" >Services</a>
+                            <a href="#" >About</a>
+                            <a href="#" >contact</a>
+                        </naV>
+                        <div class="edit-right-page-dark">
+                            <span class="material-symbols-outlined">person</span>
+                             <p>Sign Up</p>
+                            <div class="font-icons-dark">
+                            <a href="{% url 'main:home_light_view' %}"><span class="material-symbols-outlined light-icon  {% if request.COOKIES.mode == 'dark' %}dark-mode{% else %}light-mode{% endif %}">light_mode</span></a>    
+                            <a href="{% url 'main:home_dark_view' %}"><span class="material-symbols-outlined dark-icon {% if request.COOKIES.mode == 'dark' %}dark-mode{% else %}light-mode{% endif %}">dark_mode</span></a>    
+                            </div>
+                        </div>       
+            </section>
+            <main>
+                {%block content%}
+                {%endblock%}
+            </main>
+            <footer class="edit-footer-dark">
+                <nav  class="edit-navbar-footer-dark">
+                   
+                    <div class="edit-icon-home-dark">
+                        <span class="material-symbols-outlined">home</span>
+                        <a href="#" class="text-icon-home-dark">ALL</a>
+                    </div>
+                    
+                    <div   class="edit-icon-factory-dark">
+                        <span class="material-symbols-outlined">factory</span>
+                        <a href="#"class="text-icon-factory-dark">Properties</a>
+                    </div>
+                    
+                    <div  class="edit-icon-hotel-dark">
+                        <span class="material-symbols-outlined">hotel</span>
+                        <a href="#" class="text-icon-hotel-dark">HOTEL</a>
+                    </div>
+                
+                    <div class="edit-icon-villa-dark">
+                        <span class="material-symbols-outlined">villa</span>
+                        <a href="#" class="text-icon-villa-dark">VILLA</a>
+                    </div>
+                </nav>
+            </footer>
+        </div>
+    </body>
+</html>

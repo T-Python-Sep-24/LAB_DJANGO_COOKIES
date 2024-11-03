@@ -1,0 +1,243 @@
+
+*{
+    padding: 0px ;
+    margin: 0px;
+}
+.main-style-page{
+    padding: 100px ;
+    margin: 50px ;
+    flex: 1; 
+}
+body {
+    background-image:  url('../images/skyscraper.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; 
+}
+
+
+.top-style{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.style-text-home {
+    font-size: 3rem; /* Adjusted size */
+    font-weight: 600; /* Adjusted weight */
+    font-family: 'Phudu', sans-serif;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}   
+.style-text-home:hover{
+    color: red;
+    transform: scale(1.1);
+}
+.edit-navbar{
+    display: flex; /* Aligns items in a row */
+    justify-content: space-around; /* Spreads links evenly */
+    border: none; /* Adds a solid black border */
+    border-radius: 25px; /* Makes the border rounded */
+    padding: 10px; /* Adds space inside the border */
+    margin: 10px;
+    background-color: #fff; /* Background color for the navigation bar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+    gap: 20px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    
+}
+.font-icons span {
+    padding: 1px;
+    margin: 1px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out; 
+    color:black;
+}
+
+
+.edit-navbar a:hover {
+    color: red; /* Changes text color to red on hover */
+    transform: scale(1.1);
+}
+nav a {
+    text-decoration: none; /* Removes underline from links */
+    color: #000; /* Text color */
+    font-weight: bold; /* Makes text bold */
+    margin: 0 15px; /* Adds space between links */
+}
+
+.edit-right-page{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+
+} 
+
+/* This is start style home page */
+.style-home {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+    gap: 80px;
+    padding: 60px;
+    font-size: 4rem; /* Adjusts size of the title */
+    font-weight: 700;
+    line-height: 1.2; /* Spacing between lines */
+
+}
+
+.style-font-h1-f {
+    font-size:  5rem; /* Adjusted size */
+    font-weight: 600; /* Adjusted weight */
+    line-height: 1.2;
+    font-family: 'Phudu', sans-serif;
+    animation: backToFront 0.8s ease-in-out; 
+}
+@keyframes backToFront {
+    0% {
+        transform: scale(0.5); /* Starts smaller */
+        opacity: 0; /* Starts transparent */
+    }
+    50% {
+        transform: scale(1.05); /* Slightly larger than normal */
+        opacity: 0.7; /* Partial opacity */
+    }
+    100% {
+        transform: scale(1); /* Normal size */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+.me-text-phrease{
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.2rem; /* Adjust as needed */
+    line-height: 1.5; /* Ensures good spacing between lines */
+    font-weight: 400; /* Adjusts the weight for better readability */
+    color: black; 
+}
+.btn-text-Explore-Properties {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 45px;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-text-Explore-Properties:hover {
+    background-color: #333;
+}
+
+.edit-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #fff; /* White background */
+    border-radius: 40px; /* More rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for a floating effect */
+    width: 90%; /* Adjust width to ensure proper spacing */
+    max-width: 1200px; /* Maximum width constraint */
+    border: none;
+    margin-top: auto; 
+ }
+
+
+.edit-navbar-footer {
+    display: flex;
+    flex-direction: row; /* Aligns items in a row */
+    justify-content: space-around; /* Space out items evenly */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between items */
+    width: 100%; /* Ensures it spans the full width of the container */
+}
+
+.edit-icon-home {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+   gap: 2.5px; 
+}
+.text-icon-home{
+    font-weight: 400;
+    color: #5bb537;
+}
+
+.edit-icon-home span {
+    padding: 6px;
+    margin: 6px;
+    border-radius: 50%; 
+    background-color: #cde9c3; 
+    color: #5bb537;
+}
+ 
+.edit-icon-factory {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 2.5px; 
+}
+.text-icon-factory{
+    font-weight: 400;
+    color:#af792c;
+}
+
+.edit-icon-factory span {
+    padding: 6px;
+    margin: 6px;
+    border-radius: 50%; 
+    background-color: #e7d6bf;
+    color: #af792c;
+}
+
+ 
+.edit-icon-hotel {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 2.5px; 
+}
+.text-icon-hotel{
+    font-weight: 400;
+    color: #b72dba;
+}
+
+.edit-icon-hotel span {
+    padding: 6px;
+    margin: 6px;
+    border-radius: 50%; 
+    background-color: #e9c0ea ;
+    color: #b72dba;
+}
+
+.edit-icon-villa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5px; 
+}
+.text-icon-villa{
+    font-weight: 400;
+    color: #1721be;
+}
+
+.edit-icon-villa span {
+    padding: 6px;
+    margin: 6px;
+    border-radius: 50%; 
+    background-color:#b9bceb;
+    color: #1721be;
+}
