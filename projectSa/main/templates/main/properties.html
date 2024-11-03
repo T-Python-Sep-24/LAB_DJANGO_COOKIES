@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block body_class %}second{% endblock %}
+{% block naver %}nav-center{% endblock %}
+{% block content %}
+<section class="properties-list">
+    <h2>OUR PROPERTIES</h2>
+    <div class="properties">
+        {% for property in properties %}
+            <div class="property-card">
+                <img src="{% static property.image %}" alt="{{ property.title }}">
+                <div class="property-info">
+                    <h3>{{ property.title }}</h3>
+
+                    <button class="more-button">more</button>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

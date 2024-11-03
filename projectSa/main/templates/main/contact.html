@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block body_class %}third{% endblock %}
+{% block naver %}nav-center{% endblock %}
+{% block content %}
+
+<div class="contact-container">
+   <div class="contact-info">
+    <h2><i class="fas fa-phone-alt"></i> Contact Us</h2>
+    <p><strong>TELEPHONE:</strong> <a href="tel:+9665726383764"> +966 5726383764</a></p>
+    <p><strong>EMAIL:</strong> <a href="mailto:info@realestate.com">info@realestate.com</a></p>
+    <p>  <i class="fas fa-map-marker-alt"></i> <strong>ADDRESS:</strong>ANAS BIN MALIK, RIYADH</p>
+</div>
+
+    <div class="contact-map">
+<iframe  style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=حي،+طريق+سعيد+ابن+زيد،+قرطبة،+الرياض+13248&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+    </div>
+
+</div>
+
+{% endblock %}
