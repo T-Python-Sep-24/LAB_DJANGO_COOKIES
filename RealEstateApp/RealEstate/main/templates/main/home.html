@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Real Estate Home{% endblock %}
+
+{% block bodyclass %} homelightbody {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} homedarkbody {% endif %} {% endblock %}
+
+{% block content %}
+<section>
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-sm-4 col-md-6">
+                <p class="px-2 my-2 f-phudu hometitlelight {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} hometitledark {% endif %}">Find your dreams</p>
+                <p class="px-2 mt-5 mb-3 f-ubuntu homedescriptionlight {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} homedescriptiondark {% endif %}">Discover luxury properties that will surprise you.</p>
+                <a class="btn bg-black text-white" href="{% url 'main:propertyView' %}">Explore properties</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block footer %}
+<nav class="navbar navbar-expand-sm fixed-bottom justify-content-center">
+    <ul class="nav navbar-nav bg-light {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} bg-dark {% endif %}">
+        <li class="nav-item text-center mx-md-3"><a class="fs-6" href="">All</a></li>
+        <li class="nav-item text-center mx-md-3"><a class="fs-6" href="{% url 'main:propertyView' %}">Properties</a></li>
+        <li class="nav-item text-center mx-md-3"><a class="fs-6" href="">Hotel</a></li>
+        <li class="nav-item text-center mx-md-3"><a class="fs-6" href="">Villa</a></li>
+    </ul>
+</nav>
+{% endblock %}

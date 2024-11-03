@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block bodyclass %} contactlightbody {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} contactdarkbody {% endif %} {% endblock %}
+
+{% block content %}
+
+<section>
+    <div class="container-md text-start">
+        <h1 class="ps-3 fs-1 f-phudu text-black {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} text-white {% endif %} ">
+            Contact us</h1>
+        <div class="row justify-content-around w-100">
+            <div class="col-sm-10 col-md-4 bg-white rounded-4 text-start py-4 shadow">
+                <ul class="list-inline p-3">
+                    <li class="list-inline-item f-phudu fs-4">Teleophone: </li>
+                    <a href="" class="list-inline-item f-ubuntu fs-5">+966 57263883764</a>
+                </ul>
+                <ul class="list-inline p-3">
+                    <li class="list-inline-item f-phudu fs-4">Email: </li>
+                    <a href="" class="list-inline-item f-ubuntu fs-5">Bayan@RealEstate.com</a>
+                </ul>
+                <ul class="list list-unstyled p-3">
+                    <li class="list-item f-phudu fs-4">Address: </li>
+                    <li class="list-item f-ubuntu fs-5">Al Narjis, Riyadh</li>
+                    <li class="list-item f-ubuntu fs-5">Building 23</li>
+                    <li class="list-item f-ubuntu fs-5">Saudi Arabia</li>
+                </ul>
+            </div>
+            <div class="col-sm-10 col-md-7 bg-white rounded-4 p-0 shadow">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.0690423422743!2d46.7276293!3d24.8273124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efc6d472d42af%3A0x24b3a53de9cbc5c3!2sPark%20Avenue%20Mall!5e0!3m2!1sen!2ssa!4v1730547237979!5m2!1sen!2ssa"
+                    class="h-100 w-100 rounded-4" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
