@@ -36,32 +36,34 @@
 {% block footer %}
 
 <!-- Filtering navbar -->
-<nav class="navbar navbar-expand-sm fixed-bottom justify-content-center" aria-label="Floating nav">
-    <!-- Bottom nav bar components -->
-    <ul
-        class="nav navbar-nav px-4 py-2 bg-light {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} bg-dark {% endif %} shadow rounded-pill f-phudu">
-        <li class="nav-item d-flex flex-column text-center mx-md-3">
-            <a class="fs-6 material-symbols-outlined p-2 text-decoration-none rounded-pill allicon" href="">house</a>
+<div class="col-md-6 container-md justify-content-around fixed-bottom">
+    <div
+        class="row p-3 justify-content-around text-center gap-2 rounded-pill shadow bg-light {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} bg-dark {% endif %}">
+        <div class="col col-md-2 row justify-content-center">
+            <a class="col-4 fs-6 material-symbols-outlined p-2 text-decoration-none rounded-pill allicon"
+                href="">house</a>
             <a class="fs-6 linkHover links lightlinks {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% endif %}"
                 href="">All</a>
-        </li>
-        <li class="nav-item row-cols-1 text-center mx-sm-1 mx-md-3">
-            <a class="fs-6 col col-sm-4 material-symbols-outlined p-2 text-decoration-none rounded-pill propertiesicon"
+        </div>
+        <div class="col col-md-2 row justify-content-center">
+            <a class="col-4 fs-6 material-symbols-outlined p-2 text-decoration-none rounded-pill propertiesicon"
                 href="{% url 'main:propertyView' %}">apartment</a>
-            <a class="fs-6 col linkHover links lightlinks {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% endif %}"
+            <a class="fs-6 linkHover links lightlinks {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% endif %}"
                 href="{% url 'main:propertyView' %}">Properties</a>
-        </li>
-        <li class="nav-item d-flex flex-column text-center mx-sm-1 mx-md-3">
-            <a class="fs-6 material-symbols-outlined p-2 text-decoration-none rounded-pill hotelicon" href="">hotel</a>
+        </div>
+        <div class="col col-md-2 row justify-content-center">
+            <a class="col-4 fs-6 material-symbols-outlined p-2 text-decoration-none rounded-pill hotelicon"
+                href="">hotel</a>
             <a class="fs-6 linkHover links lightlinks {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% endif %}"
                 href="">Hotel</a>
-        </li>
-        <li class="nav-item d-flex flex-column text-center mx-sm-1 mx-md-3">
-            <a class="fs-6 material-symbols-outlined p-2 text-decoration-none rounded-pill villaicon" href="">villa</a>
+        </div>
+        <div class="col col-md-2 row justify-content-center">
+            <a class="col-4 fs-6 material-symbols-outlined p-2 text-decoration-none rounded-pill villaicon"
+                href="">villa</a>
             <a class="fs-6 linkHover links lightlinks {% if 'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} darklinks {% endif %}"
                 href="">Villa</a>
-        </li>
-    </ul>
-</nav>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
