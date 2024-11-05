@@ -1,12 +1,22 @@
+<body class="properties-page"></body>
 {% extends 'main/base.html' %}
-
-{% block title %}
-properties
-{% endblock %}
-
-{% block content %}
+{% load static %}
 
 
+    {% block title %}Properties{% endblock %}
+    {% block content %}
+    
+    <div class="card-container">
+        {% for property in properties %}
+        <div class="card">
+            <img src="{% static property.image %}" alt="{{ property.title }}" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">{{ property.title }}</h3>
+                <p class="card-description">This is a brief description of {{ property.title }}.</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
-
-{% endblock %}
+    {% endblock %}
+</body>

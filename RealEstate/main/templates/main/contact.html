@@ -1,11 +1,27 @@
-{% extends 'main/base.html' %}
+<body class="contact-page">
+    {% extends 'main/base.html' %}
+    {% block title %}Contact{% endblock %}
+    {% block content %}
+    <section class="contact-info">
+    <div class="map-container">
+        <div>
+            <p>CONTACT US</p>
+            <p>Telephone:</p> 
+            <a class="a-co">+966 57263883764</a>
+            <p>Email:</p> 
+            <a class="a-co">info@realestate.com</a>
+            <p>Address: Anas Bin Malik, Riyadh, Building W1-112, Saudi Arabia</p>
+        </div>
+        
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345092884!2d144.9537353153178!3d-37.81627997975136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11c8c9%3A0x5045675218ceed30!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1614867167365!5m2!1sen!2sau"
+                allowfullscreen=""
+                loading="lazy"></iframe>
+        </div>
+    </div>
+    </section>
+    {% endblock %}
+</body>
 
-{% block title %}
-contact
-{% endblock %}
 
-{% block content %}
-<div class="contact-page">
-    Content
-</div>
-{% endblock %}
